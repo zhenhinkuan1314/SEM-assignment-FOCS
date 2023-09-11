@@ -1,5 +1,5 @@
 
-// JavaScript to trigger the collapse behavior
+//--------------- JavaScript to trigger the collapse behavior ---------------
 document.addEventListener("DOMContentLoaded", function () {
     const collapseInitElements = document.querySelectorAll("[data-te-collapse-init]");
 
@@ -18,4 +18,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+//--------------- JavaScript for ChatBot Button Toggler ---------------
+document.addEventListener("DOMContentLoaded", () => {
+    const chatbotToggler = document.querySelector(".chatbot-toggler");
+
+    chatbotToggler.addEventListener("click", () => {
+        document.body.classList.toggle("show-chatbot");
+    });
+});
+
+
 
