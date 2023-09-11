@@ -1,8 +1,3 @@
-.background-container {
-    background-image: url("../images/background.jpg");
-    background-size: cover;
-}
-
 .banner {
     background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.7)), url("../images/banner3.png");
     background-size: cover;
@@ -31,4 +26,35 @@ h1 {
     font-size: 16px;
     font-weight: 500;
     color: #9fa1a3
+}
+
+.flex-card {
+    display:flex;
+    padding-top:50px;
+}
+
+.display-card {
+    display:block;
+    box-sizing:border-box;
+    outline:none;
+    word-break:break-word;
+    text-align:center;
+    margin:0 auto;
+  }
+  
+.title-card {
+    width:460px;
+}
+  
+.desc-card {
+    width:460px;
+    color: #4c4d4e;
+    font-size:17px;
+}
+
+.polaroid {
+    width:83%;
+    align-self:center;
+    background-color:white;
+    margin:40px 40px 40px 40px;
 }
