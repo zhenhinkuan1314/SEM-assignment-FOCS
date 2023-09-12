@@ -1,60 +1,40 @@
-.banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.7)), url("../images/banner3.png");
-    background-size: cover;
-    width: auto; 
-    height: 400px; 
-    line-height: 400px;
-    text-align: center;
-}
-
-h1 {
-    margin: auto; 
-    color: white; 
-    font-size: 30px; 
-    display: inline-block; 
-    font-weight: bold
+.w-full {
+    width: 100%;
+    height: 100%
 }
 
 .tarumtdesc {
-    min-width: 300px;
+    min-width: 30%;
     max-width: 70%;
     margin-right: auto;
     margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-top: 50px;
     text-align: justify;
     font-size: 16px;
     font-weight: 500;
-    color: #9fa1a3
+    color: #86888a
 }
 
-.flex-card {
-    display:flex;
-    padding-top:50px;
+.card {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    align-items: stretch;
 }
 
-.display-card {
-    display:block;
-    box-sizing:border-box;
-    outline:none;
-    word-break:break-word;
-    text-align:center;
-    margin:0 auto;
-  }
-  
-.title-card {
-    width:460px;
-}
-  
-.desc-card {
-    width:460px;
-    color: #4c4d4e;
-    font-size:17px;
+div .max-w-sm {
+    text-align: center;
+    margin: 50px;
+    background-color: #ffebcd;
 }
 
-.polaroid {
-    width:83%;
-    align-self:center;
-    background-color:white;
-    margin:40px 40px 40px 40px;
+.center-image {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 250px;
+}
+
+p .mb-3 {
+    flex-grow: 1;
 }

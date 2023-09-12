@@ -1,64 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TARUMT</title>
-    
-        <!----- Customise CSS ----->
-        <link rel="stylesheet" type="text/css" href="styles/home.css">
-    </head>
-    
-    <body>
-        <div class="banner">
-            <h1>Tunku Abdul Rahman University of Management and Technology</h1>
-        </div>
 
-        <div class="tarumtdesc">
-            <p>
-                Tunku Abdul Rahman University of Management and Technology (‘TAR UMT’) was established in 1969 as TAR College with the focus of providing tertiary education opportunities for young Malaysians regardless of race, class and creed who were seeking quality education as well as meeting the rising demand for human capital from businesses and industries. The College started with a single campus in Setapak, Kuala Lumpur which is now the Main Campus. Subsequently, five branch campuses were established in Penang, Perak, Johor, Pahang and Sabah.<br><br>
-                TAR UMT Main Campus in Kuala Lumpur sits on a piece of 171-acre land and the campus is an iconic landmark for its architectural feat in blending historical buildings with modern structures as well as the verdant greenery. Meanwhile, the branch campuses in Penang, Perak, Johor, Pahang and Sabah are purpose-built complete with state-of-the-art infrastructure and facilities for learning and teaching.<br><br>
-                TAR UMT offers programmes at pre-university, diploma, bachelor degree and postgraduate levels that are widely recognised by the academia and industries for their depth and breadth of scope and academic rigor. Today, TAR UMT has a student population of about 29,000 including international students from more than 20 countries enrolling in close to 200 programmes over a wide range of disciplines from foundation to accountancy, finance, business, economics, engineering, built environment, applied sciences, ICT as well as mass communication, creative arts, social science and hospitality management.<br><br> 
-                These programmes are conducted by 7 faculties and 1 centre namely the Centre for Pre-University Studies, Faculty of Accountancy, Finance and Business, Faculty of Applied Sciences, Faculty of Computing and Information Technology, Faculty of Engineering and Technology, Faculty of Built Environment, Faculty of Communication and Creative Industries and Faculty of Social Science and Humanities. In addition, there is also a Centre for Postgraduate Studies and Research that focuses on research.<br><br> 
-                TAR UMT is one of the oldest institutions of higher learning in Malaysia with close to 300,000 students having passed through its doors.<br><br>
-                TAR UMT has won many scholastic awards and recognition amongst which include the SETARA  5-Star rating for the year 2018 / 2019 under the University Colleges category, Premier Digital Tech Institution status awarded by Malaysia Digital Economy Corporation (‘MDEC’) in 2019 for the second time and Sin Chew Education Awards 2018 / 19 where TAR UMT was named as the recipient of the Outstanding Educational Institutions: Private Universities / Colleges award, Product Award and CSR award. Besides this, TAR UMT also won the Asia Pacific CSR Awards 2016 where the institution won the Excellence in Education Improvement award.<br><br>
-            </p>
-        </div>      
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TARUMT</title>
 
-        <div class="flex-card">
-            <div class="display-card">
-                  <div class="polaroid">
-                        <img src="images/programme.png" alt="Programme">
-                    <div class="title-card">
-                      <h3>Simple</h3>
-                    </div>
-                  </div>
-                  <p class="desc-card">We believe that the classification table and design in our website will simplify all people in different age groups to find their favourite product.
-                  </p>
-            </div>
+  <!---- Customise Tailwind-->
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@1.6.4/dist/flowbite.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@1.6.4/dist/flowbite.min.css" rel="stylesheet">
 
-            <div class="display-card">
-                <div class="polaroid">
-                      <img src="images/staff.png" alt="Programme">
-                  <div class="title-card">
-                    <h3>Simple</h3>
-                  </div>
-                </div>
-                <p class="desc-card">We believe that the classification table and design in our website will simplify all people in different age groups to find their favourite product.
-                </p>
-          </div>
+  <!----- Customise CSS ----->
+  <link rel="stylesheet" type="text/css" href="styles/home.css">
+</head>
 
-          <div class="display-card">
-            <div class="polaroid">
-                  <img src="images/faq.png" alt="Programme">
-              <div class="title-card">
-                <h3>Simple</h3>
-              </div>
-            </div>
-            <p class="desc-card">We believe that the classification table and design in our website will simplify all people in different age groups to find their favourite product.
-            </p>
+<body>
+
+
+  <div id="default-carousel" class="relative w-full" data-carousel="slide">
+    <!-- Carousel wrapper -->
+    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+      <!-- Item 1 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img src="images/home-banner1.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
       </div>
-        </div>
-    </body>
+      <!-- Item 2 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img src="images/home-banner2.jpg"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+      </div>
+      <!-- Item 3 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img src="images/home-banner3.jpg"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+      </div>
+      <!-- Item 4 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img src="images/home-banner4.jpg"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+      </div>
+      <!-- Item 5 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img src="images/home-banner5.jpg"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+      </div>
+    </div>
+    <!-- Slider indicators -->
+    <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+        data-carousel-slide-to="0"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+        data-carousel-slide-to="1"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+        data-carousel-slide-to="2"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+        data-carousel-slide-to="3"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+        data-carousel-slide-to="4"></button>
+    </div>
+    <!-- Slider controls -->
+    <button type="button"
+      class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-prev>
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+          fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M5 1 1 5l4 4" />
+        </svg>
+        <span class="sr-only">Previous</span>
+      </span>
+    </button>
+    <button type="button"
+      class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-next>
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+          fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="m1 9 4-4-4-4" />
+        </svg>
+        <span class="sr-only">Next</span>
+      </span>
+    </button>
+  </div>
+
+
+  <div class="tarumtdesc">
+    <p>
+      Tunku Abdul Rahman University of Management and Technology (‘TAR UMT’) was established in 1969 as TAR College with
+      the focus of providing tertiary education opportunities for young Malaysians regardless of race, class and creed
+      who were seeking quality education as well as meeting the rising demand for human capital from businesses and
+      industries. The College started with a single campus in Setapak, Kuala Lumpur which is now the Main Campus.
+      Subsequently, five branch campuses were established in Penang, Perak, Johor, Pahang and Sabah.<br><br>
+      TAR UMT Main Campus in Kuala Lumpur sits on a piece of 171-acre land and the campus is an iconic landmark for its
+      architectural feat in blending historical buildings with modern structures as well as the verdant greenery.
+      Meanwhile, the branch campuses in Penang, Perak, Johor, Pahang and Sabah are purpose-built complete with
+      state-of-the-art infrastructure and facilities for learning and teaching.<br><br>
+      TAR UMT offers programmes at pre-university, diploma, bachelor degree and postgraduate levels that are widely
+      recognised by the academia and industries for their depth and breadth of scope and academic rigor. Today, TAR UMT
+      has a student population of about 29,000 including international students from more than 20 countries enrolling in
+      close to 200 programmes over a wide range of disciplines from foundation to accountancy, finance, business,
+      economics, engineering, built environment, applied sciences, ICT as well as mass communication, creative arts,
+      social science and hospitality management.<br><br>
+      These programmes are conducted by 7 faculties and 1 centre namely the Centre for Pre-University Studies, Faculty
+      of Accountancy, Finance and Business, Faculty of Applied Sciences, Faculty of Computing and Information
+      Technology, Faculty of Engineering and Technology, Faculty of Built Environment, Faculty of Communication and
+      Creative Industries and Faculty of Social Science and Humanities. In addition, there is also a Centre for
+      Postgraduate Studies and Research that focuses on research.<br><br>
+      TAR UMT is one of the oldest institutions of higher learning in Malaysia with close to 300,000 students having
+      passed through its doors.<br><br>
+      TAR UMT has won many scholastic awards and recognition amongst which include the SETARA 5-Star rating for the year
+      2018 / 2019 under the University Colleges category, Premier Digital Tech Institution status awarded by Malaysia
+      Digital Economy Corporation (‘MDEC’) in 2019 for the second time and Sin Chew Education Awards 2018 / 19 where TAR
+      UMT was named as the recipient of the Outstanding Educational Institutions: Private Universities / Colleges award,
+      Product Award and CSR award. Besides this, TAR UMT also won the Asia Pacific CSR Awards 2016 where the institution
+      won the Excellence in Education Improvement award.<br><br>
+    </p>
+  </div>
+
+  <div class="card">
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <a href="#">
+        <img class="rounded-t-lg center-image" src="images/home-programme.jpg" alt="Programme" />
+      </a>
+      <div class="p-5">
+        <a href="#">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> Programme </h5>
+        </a>
+        <a href="#">
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            TAR UMT offers cutting-edge management and technology programs that equip students with the skills and
+            knowledge needed to excel in the dynamic fields of business and technology.</p>
+        </a>
+      </div>
+    </div>
+
+
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <a href="#">
+        <img class="rounded-t-lg center-image" src="images/home-staff.jpg" alt="Staff" />
+      </a>
+      <div class="p-5">
+        <a href="#">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> Staff </h5>
+        </a>
+        <a href="#">
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">TAR UMT boasts a dedicated and experienced staff
+            in its management and technology departments, providing students with top-notch education and mentorship to
+            succeed in their academic and professional pursuits.</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <a href="faq.html">
+        <img class="rounded-t-lg center-image" src="images/home-faq.jpg" alt="FAQ" />
+      </a>
+      <div class="p-5">
+        <a href="faq.html">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> FAQ </h5>
+        </a>
+        <a href="faq.html">
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">TAR UMT FAQ provides answers to common questions
+            about the university's faculty, their qualifications, and expertise in various fields, ensuring students
+            have access to relevant information and support.</p>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
 
 </html>
