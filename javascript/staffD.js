@@ -2,7 +2,7 @@ let jsonData = [];  // This should be a global variable to store the entire pars
 let currentPage = 1;  // Initially, the current page is set to 1
 let itemsPerPage = 2;
 
-const csvFile = '../data/staff.csv';
+const csvFile = '../data/staff2.csv';
 fetch(csvFile)
         .then(response => response.text())
         .then(data => {
@@ -38,7 +38,7 @@ function displayjson(data) {
             obj[header] = content[i];
         });
         jsonData.push(obj);
-        console.log(jsonData);
+        // console.log(jsonData);
     });
 
     displayPage(currentPage);  // Initially display the first page
@@ -57,15 +57,18 @@ function displayPage(pageNumber) {
         
         // Add responsive classes
         divElement.classList.add('flex', 'flex-col', 'md:flex-row', 'items-center', 'mb-4', 'p-4', 'shadow-md', 'bg-white', 'rounded-md', 'w-full', 'md:w-3/4', 'mx-auto');
+        
+        const name = jsonData[i].Name ? jsonData[i].Name.replace(/\s+/g, '') : "default";
+        const imagePath = `../images/staff/${name}.jpg`;
 
-        let imgHtml = '<div class="mr-4 mb-4 md:mb-0 w-full md:w-auto">';
-        imgHtml += '<img src="../images/tarumt.png" alt="Description" class="w-full max-w-60 md:w-60">';
-        imgHtml += '</div>';
+        let imgHtml = `<div class="mr-4 mb-4 md:mb-0 w-full md:w-auto">
+            <img src="${imagePath}" alt="${name}" class="w-full max-w-60 md:w-60">
+        </div>`;
 
         let jsonDataHtml = '<div class="w-full">';
         for (let key in jsonData[i]) {
             if(jsonData[i][key] !== "-") {
-                console.log(key);
+                // console.log(key);
                 let extraClasses = getExtraClassesForKey(key);
                 let value = jsonData[i][key];
                
