@@ -17,8 +17,7 @@
     <!----- Customise CSS ----->
     <link rel="stylesheet" type="text/css" href="styles/faq.css">
 
-    <!----- Customise Javascript ----->
-    <!-- <script src="../javascript/comparisonTable.js"></script> -->
+   
 
 </head>
 
@@ -64,126 +63,73 @@
 
 <body>
 
-     <!-- Banner -->
-    <div class="banner h-64 md:h-80 lg:h-96 xl:h-128 bg-blue-500 text-white text-center flex items-center justify-center">
-        <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">Compare Progammes</h1>
-    </div>
+<!-- Banner -->
+<div class="banner h-64 md:h-80 lg:h-96 xl:h-128 bg-blue-500 text-white text-center flex items-center justify-center">
+    <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">Compare Programs</h1>
+</div>
 
-    <!-- Container -->
-    <div class="container my-10 mx-auto md:my-20 md:px-6 xl:px-24">
+<!-- Container -->
+<div class="container my-10 mx-auto md:my-20 md:px-6 xl:px-24">
 
-        <!-- FAQ Section -->
-        <section class="mb-10 md:mb-32">
-            <h2 class="mb-6 text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold pl-6 text-center">Comparison Table</h2>
+    <!-- FAQ Section -->
+    <section class="mb-10 md:mb-32">
+        <h2 class="mb-6 text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold pl-6 text-center">Comparison Table</h2>
 
-            <div class="comparison-table bg-gray-100 rounded-lg p-4 md:p-8 shadow-md">
-                <div class="comparison-table-body">
-                    <table class="table w-full">
-                        <thead>
-                            <tr>
-                                <th class="p-2 md:p-4">
-                                    <div class="flex items-center justify-center"> <!-- Center the select element -->
-                                    <select id="courseSelectTop1" class="select">
+        <div class="comparison-table bg-gray-100 rounded-lg p-4 md:p-8 shadow-md overflow-x-auto">
+            <div class="comparison-table-body">
+                <table class="table-auto w-full">
+                    <thead>
+                        <tr>
+                            <th class="p-2 md:p-4">
+                                <div class="flex items-center justify-center"> <!-- Center the select element -->
+                                    <select id="courseSelectTop1" class="select md:text-base">
+                                        <option value="">Select your course</option>
                                         <option value="Introduction to Computer Science">Introduction to Computer Science</option>
                                         <option value="Data Structures and Algorithms">Data Structures and Algorithms</option>
                                         <option value="Software Engineering">Software Engineering</option>
                                     </select>
-                                    </div>
-                                </th>
-                                <th class="thead-middle p-2 md:p-4 h-auto text-center">Attribute</th>
-                                <th class="p-2 md:p-4">
-                                    <div class="flex items-center justify-center"> <!-- Center the select element -->
-                                        <select id="courseSelectTop2" class="select">
-                                            <option value="Introduction to Computer Science">Introduction to Computer Science</option>
-                                            <option value="Data Structures and Algorithms">Data Structures and Algorithms</option>
-                                            <option value="Software Engineering">Software Engineering</option>
-                                        </select>
-                                    </div>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody id="comparisonData">
-                            <tr >
-                                <td class="p-2 md:p-4 h-auto text-center" id="firstAttribute"></td>
-                                <td class="p-2 md:p-4 h-auto text-center">Name</td>
-                                <td class="p-2 md:p-4 h-auto text-center" id="thirdAttribute"></td>
-                            </tr>
-                            <tr>
-                                <td class="p-2 md:p-4 h-auto text-center" id="firstAttribute2"></td>
-                                <td class="p-2 md:p-4 h-auto text-center">Price</td>
-                                <td class="p-2 md:p-4 h-auto text-center" id="thirdAttribute2"></td>
-                            </tr>
-                            <tr>
-                                <td class="p-2 md:p-4 h-auto text-center" id="firstAttribute3"></td>
-                                <td class="p-2 md:p-4 h-auto text-center">Category</td>
-                                <td class="p-2 md:p-4 h-auto text-center" id="thirdAttribute3"></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                                </div>
+                            </th>
+                            <th class="thead-middle p-2 md:p-4 h-auto text-center">Attribute</th>
+                            <th class="p-2 md:p-4">
+                                <div class="flex items-center justify-center"> <!-- Center the select element -->
+                                    <select id="courseSelectTop2" class="select md:text-base">
+                                        <option value="">Select your course</option>
+                                        <option value="Introduction to Computer Science">Introduction to Computer Science</option>
+                                        <option value="Data Structures and Algorithms">Data Structures and Algorithms</option>
+                                        <option value="Software Engineering">Software Engineering</option>
+                                    </select>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="comparisonData" class="bg-white">
+                        <tr class="border-b border-gray-300">
+                            <td class="p-2 md:p-4 h-auto text-center border border-gray-300" id="firstAttribute"></td>
+                            <td class="p-2 md:p-4 h-auto text-center border border-gray-300">Name</td>
+                            <td class="p-2 md:p-4 h-auto text-center border border-gray-300" id="thirdAttribute"></td>
+                        </tr>
+                        <tr class="border-b border-gray-300">
+                            <td class="p-2 md:p-4 h-auto text-center border border-gray-300" id="firstAttribute2"></td>
+                            <td class="p-2 md:p-4 h-auto text-center border border-gray-300">Price</td>
+                            <td class="p-2 md:p-4 h-auto text-center border border-gray-300" id="thirdAttribute2"></td>
+                        </tr>
+                        <tr>
+                            <td class="p-2 md:p-4 h-auto text-center border border-gray-300" id="firstAttribute3"></td>
+                            <td class="p-2 md:p-4 h-auto text-center border border-gray-300">Category</td>
+                            <td class="p-2 md:p-4 h-auto text-center border border-gray-300" id="thirdAttribute3"></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+</div>
 
-    <script>
-        // Get references to the course selection elements and the comparison data cells
-        const courseSelect = document.getElementById('courseSelect');
-        const courseSelectTop1 = document.getElementById('courseSelectTop1');
-        const courseSelectTop2 = document.getElementById('courseSelectTop2');
-        const firstAttributeCell = document.getElementById('firstAttribute');
-        const firstAttributeCell2 = document.getElementById('firstAttribute2');
-        const firstAttributeCell3 = document.getElementById('firstAttribute3');
-        const thirdAttributeCell = document.getElementById('thirdAttribute');
-        const thirdAttributeCell2 = document.getElementById('thirdAttribute2');
-        const thirdAttributeCell3 = document.getElementById('thirdAttribute3');
 
-        // Define a JavaScript object to hold course data
-        const courseData = {
-            "Introduction to Computer Science": ["Computer Science", "10000", "Science"],
-            "Data Structures and Algorithms": ["Data Structures", "99999", "Data"],
-            "Software Engineering": ["Software Engineering", "1800000", "software"]
-        };
 
-        // Event listeners to update comparison table when a course is selected
-        courseSelectTop1.addEventListener('change', () => {
-            updateComparisonTable(courseSelectTop1.value);
-        });
-
-        courseSelectTop2.addEventListener('change', () => {
-            updateComparisonTable2(courseSelectTop2.value);
-        });
-
-        function updateComparisonTable(selectedCourse) {
-            if (selectedCourse in courseData) {
-                // Update the first column based on the selected course
-                firstAttributeCell.textContent = courseData[selectedCourse][0]; // First column
-                firstAttributeCell2.textContent = courseData[selectedCourse][1]; // First column
-                firstAttributeCell3.textContent = courseData[selectedCourse][2]; // First column
-                
-            } else {
-                // Clear the comparison table when no course is selected
-                firstAttributeCell.textContent = '';
-                firstAttributeCell2.textContent = '';
-                firstAttributeCell3.textContent = '';
-            }
-        }
-
-        function updateComparisonTable2(selectedCourse) {
-            if (selectedCourse in courseData) {
-                // Update the first column based on the selected course
-               
-                thirdAttributeCell.textContent = courseData[selectedCourse][0]; // Third column
-                thirdAttributeCell2.textContent = courseData[selectedCourse][1]; // Third column
-                thirdAttributeCell3.textContent = courseData[selectedCourse][2]; // Third column
-            } else {
-                // Clear the comparison table when no course is selected
-                thirdAttributeCell.textContent = '';
-                thirdAttributeCell2.textContent = '';
-                thirdAttributeCell3.textContent = '';
-            }
-        }
-
-    </script>
+ <!----- Customise Javascript ----->
+ <script src="javascript/comparisonTable.js"></script>
 </body>
 
 <footer class="bg-gray-100">
