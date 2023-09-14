@@ -1,3 +1,13 @@
+//--------------- Toggle Chatbot Button ---------------
+document.addEventListener("DOMContentLoaded", () => {
+    const chatbotToggler = document.querySelector(".chatbot-toggler");
+
+    chatbotToggler.addEventListener("click", () => {
+        document.body.classList.toggle("show-chatbot");
+    });
+});
+
+//--------------- Chatbot Conversation ---------------
 const chat = {
     1: {
         text: 'Hi! Welcome to Tarumt FOCS.',
