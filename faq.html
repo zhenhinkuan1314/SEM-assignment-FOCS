@@ -22,9 +22,7 @@
 
     <!----- Customise Javascript ----->
     <script type="text/babel" data-presets="es2015,es2016,es2017" src="/javascript/chatbot.js"></script>
-    <script src="/javascript/faq.js"></script>
     <script src="/javascript/conversation.js"></script>
-
 
     <!-- These provide in-browser transpilation of ES6 JS code to ES5 to support IE11 -->
     <script src="https://unpkg.com/@babel/polyfill@7.6.0/dist/polyfill.min.js"></script>
@@ -50,20 +48,31 @@
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
                 <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg bg-yellow-100 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-yellow-100 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                     <li>
-                    <a href="Home.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">Home</a>
+                        <a href="Home.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">
+                            Home
+                        </a>
                     </li>
                     <li>
-                    <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About Us</a>
+                        <a href="comparisonTable.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">
+                            Compare Course
+                        </a>
                     </li>
                     <li>
-                    <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Facility</a>
+                        <a href="enrollment.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">
+                            Enrollment
+                        </a>
                     </li>
                     <li>
-                    <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Out Team</a>
+                        <a href="Staff_Directory.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">
+                            Staff Directory
+                        </a>
                     </li>
                     <li>
-                    <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                        <a href="faq.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">
+                            FAQ
+                        </a>
                     </li>
+                    
                 </ul>
             </div>
         </div>
@@ -79,27 +88,27 @@
         <h1 style="margin: auto; color: white; font-size: 50px; display: inline-block; font-weight: bold;">FAQ</h1>
     </div>
 
-    <div class="container my-20 mx-auto md:px-6 xl:px-24">
+    <div class="container my-5 mx-auto md:px-6 xl:px-24">
 
-        <section class="mb-32">
-            <h2 class="mb-6 pl-6 text-3xl font-bold">Frequently asked questions</h2>
-            
-            <!--------------- FAQ Question 1 --------------->
-            <div id="accordionFlushExample">
-                
-                <div class="rounded-none border border-t-0 border-l-0 border-r-0 border-neutral-200">
-                    <h2 class="mb-0" id="flush-headingOne">
-                        <button
-                        class="group relative flex w-full items-center rounded-none border-0 py-4 px-5 text-left text-base font-bold transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:text-primary-400"
-                        type="button" data-te-collapse-init data-te-target="#flush-collapseOne" aria-expanded="false"
-                        aria-controls="flush-collapseOne">
-                        1. What are the programmes offered?
+        <!--------------- FAQ --------------->
+        <section class="bg-white dark:bg-gray-900">
+            <div class="container max-w-4xl px-6 py-10 mx-auto">
+                <h1 class="text-3xl font-bold text-center text-gray-800 lg:text-3xl dark:text-white">Frequently asked questions</h1>
+        
+                <div class="mt-12 space-y-8">
+
+                    <!--------------- FAQ Question 1 --------------->
+                    <div class="border-2 border-gray-100 rounded-lg dark:border-gray-700">
+                        <button class="flex items-center justify-between w-full p-8" onclick="toggleDropdown('question1', 'icon1')">
+                            <h1 class="font-semibold text-gray-700 dark:text-white">1. What are the programmes offered?</h1>
+                            
+                            <span id="icon1" class="text-white bg-blue-500 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                </svg>
+                            </span>
                         </button>
-                    </h2>
-
-                    <div id="flush-collapseOne" class="!visible border-0" data-te-collapse-item data-te-collapse-show
-                        aria-labelledby="flush-headingOne" data-te-parent="#accordionFlushExample">
-                        <div class="py-4 px-5 text-neutral-500 dark:text-neutral-300">
+                        <div id="question1" class="hidden p-8 text-sm text-gray-500 dark:text-gray-300">
                             <p>
                                 For Bachelor Degree and Diploma programmes offered, please click
                                 <a href="https://www.tarc.edu.my/admissions/programmes/programme-offered-a-z/undergraduate-programme/" style="text-decoration: underline; color: blue;" target="_blank">here</a>
@@ -109,26 +118,19 @@
                             </p>
                         </div>
                     </div>
-                </div>
 
-            </div>
-
-            <!--------------- FAQ Question 2 --------------->
-            <div id="accordionFlushExample">
-                
-                <div class="rounded-none border border-t-0 border-l-0 border-r-0 border-neutral-200">
-                    <h2 class="mb-0" id="flush-headingTwo">
-                        <button
-                        class="group relative flex w-full items-center rounded-none border-0 py-4 px-5 text-left text-base font-bold transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:text-primary-400"
-                        type="button" data-te-collapse-init data-te-target="#flush-collapseTwo" aria-expanded="false"
-                        aria-controls="flush-collapseTwo">
-                        2. When are TAR UMT intakes?
+                    <!--------------- FAQ Question 2 --------------->
+                    <div class="border-2 border-gray-100 rounded-lg dark:border-gray-700">
+                        <button class="flex items-center justify-between w-full p-8" onclick="toggleDropdown('question2', 'icon2')">
+                            <h1 class="font-semibold text-gray-700 dark:text-white">2. When are TAR UMT intakes?</h1>
+                            
+                            <span id="icon2" class="text-white bg-blue-500 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                </svg>
+                            </span>
                         </button>
-                    </h2>
-
-                    <div id="flush-collapseTwo" class="!visible border-0" data-te-collapse-item data-te-collapse-show
-                        aria-labelledby="flush-headingTwo" data-te-parent="#accordionFlushExample">
-                        <div class="py-4 px-5 text-neutral-500 dark:text-neutral-300">
+                        <div id="question2" class="hidden p-8 text-sm text-gray-500 dark:text-gray-300">
                             <p>
                                 Our intakes are in February, June, October and November. <br /><br />
                                 The June Intake is the Main Intake. <br /><br />
@@ -138,65 +140,49 @@
                             </p>
                         </div>
                     </div>
-                </div>
 
-            </div>
-
-            <!--------------- FAQ Question 3 --------------->
-            <div id="accordionFlushExample">
-                
-                <div class="rounded-none border border-t-0 border-l-0 border-r-0 border-neutral-200">
-                    <h2 class="mb-0" id="flush-headingThree">
-                        <button
-                        class="group relative flex w-full items-center rounded-none border-0 py-4 px-5 text-left text-base font-bold transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:text-primary-400"
-                        type="button" data-te-collapse-init data-te-target="#flush-collapseThree" aria-expanded="false"
-                        aria-controls="flush-collapseThree">
-                        3. How many TAR UMT campuses are there?
+                    <!--------------- FAQ Question 3 --------------->
+                    <div class="border-2 border-gray-100 rounded-lg dark:border-gray-700">
+                        <button class="flex items-center justify-between w-full p-8" onclick="toggleDropdown('question3', 'icon3')">
+                            <h1 class="font-semibold text-gray-700 dark:text-white">3. How many TAR UMT campuses are there?</h1>
+                            
+                            <span id="icon3" class="text-white bg-blue-500 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                </svg>
+                            </span>
                         </button>
-                    </h2>
-
-                    <div id="flush-collapseThree" class="!visible border-0" data-te-collapse-item data-te-collapse-show
-                        aria-labelledby="flush-headingThree" data-te-parent="#accordionFlushExample">
-                        <div class="py-4 px-5 text-neutral-500 dark:text-neutral-300">
+                        <div id="question3" class="hidden p-8 text-sm text-gray-500 dark:text-gray-300">
                             <p>
                                 TAR UMT has 6 campuses; Kuala Lumpur, Penang, Perak, Johor, Pahang and Sabah.
                             </p>
                         </div>
                     </div>
-                </div>
 
-            </div>
-
-            <!--------------- FAQ Question 4 --------------->
-            <div id="accordionFlushExample">
-                
-                <div class="rounded-none border border-t-0 border-l-0 border-r-0 border-neutral-200">
-                    <h2 class="mb-0" id="flush-headingFour">
-                        <button
-                        class="group relative flex w-full items-center rounded-none border-0 py-4 px-5 text-left text-base font-bold transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:text-primary-400"
-                        type="button" data-te-collapse-init data-te-target="#flush-collapseFour" aria-expanded="false"
-                        aria-controls="flush-collapseFour">
-                        4. How much are the programme fees?
+                    <!--------------- FAQ Question 4 --------------->
+                    <div class="border-2 border-gray-100 rounded-lg dark:border-gray-700">
+                        <button class="flex items-center justify-between w-full p-8" onclick="toggleDropdown('question4', 'icon4')">
+                            <h1 class="font-semibold text-gray-700 dark:text-white">4. How much are the programme fees?</h1>
+                            
+                            <span id="icon4" class="text-white bg-blue-500 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                </svg>
+                            </span>
                         </button>
-                    </h2>
-
-                    <div id="flush-collapseFour" class="!visible border-0" data-te-collapse-item data-te-collapse-show
-                        aria-labelledby="flush-headingThree" data-te-parent="#accordionFlushExample">
-                        <div class="py-4 px-5 text-neutral-500 dark:text-neutral-300">
+                        <div id="question4" class="hidden p-8 text-sm text-gray-500 dark:text-gray-300">
                             <p>
                                 For details on fees, please click 
                                 <a href="https://www.tarc.edu.my/bursary/content.jsp?cat_id=5AA0377F-4E7F-494A-8EB4-CEF5CE4DD7AE" style="color: blue; text-decoration: underline;" target="_blank">here</a>
                             </p>
                         </div>
                     </div>
+        
                 </div>
-
             </div>
-
         </section>
 
     </div>
-
 
     <!--------------- Chatbot --------------->
     <div id="chatbot-div">
@@ -329,4 +315,32 @@
 </footer>
 
 </html>
+
+<script>
+    function toggleDropdown(contentId, iconId) {
+        const content = document.getElementById(contentId);
+        const icon = document.getElementById(iconId);
+        content.classList.toggle('hidden');
+        icon.classList.toggle('bg-blue-500');
+        icon.classList.toggle('bg-gray-400');
+        
+        if (content.classList.contains('hidden')) {
+            // Set the icon to the closed state
+            icon.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                        </svg>
+            `;
+        } else {
+            // Set the icon to the open state
+            icon.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
+                </svg>
+            `;
+        }
+    }
+
+    
+</script>
 
