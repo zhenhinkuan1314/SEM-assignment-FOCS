@@ -1,17 +1,4 @@
-    // Get references to the course selection elements and the comparison data cells
-    const courseSelect = document.getElementById('courseSelect');
-    const courseSelectTop1 = document.getElementById('courseSelectTop1');
-    const courseSelectTop2 = document.getElementById('courseSelectTop2');
-    const firstAttributeCell = document.getElementById('firstAttribute');
-    const firstAttributeCell2 = document.getElementById('firstAttribute2');
-    const firstAttributeCell3 = document.getElementById('firstAttribute3');
-    const firstAttributeCell4 = document.getElementById('firstAttribute4');
-    const firstAttributeCell5 = document.getElementById('firstAttribute5');
-    const thirdAttributeCell = document.getElementById('thirdAttribute');
-    const thirdAttributeCell2 = document.getElementById('thirdAttribute2');
-    const thirdAttributeCell3 = document.getElementById('thirdAttribute3');
-    const thirdAttributeCell4 = document.getElementById('thirdAttribute4');
-    const thirdAttributeCell5 = document.getElementById('thirdAttribute5');
+
 
     // Define a JavaScript object to hold course data
     const courseData = {
@@ -25,50 +12,55 @@
         "Bachelor of Computer Science (Honours) in Data Science": ["3 years", "Estimated Total Fees : RM34,300 (Malaysian Student), RM59,900 (International Student)", "- Data Science Skills<br>- Data Analysis<br>- Machine Learning<br>- Artificial Intelligence (AI)<br>- Internet of Things (IoT)<br>- Business Intelligence (BI)<br>- Data Warehouse Technology<br>- Cloud Computing<br>- Computer Science Core Courses<br>- Real-Life Projects<br>- Industry Exposure<br>- SAS Joint Certificate","KL - Kuala Lumpur Main Campus<br>(R2/481/4/0345A)(08/28)(AA0109)<br>PG - Penang Branch Campus<br>(N/481/6/0815)(06/24)(MQA/PA10813)", "Year 1 Intake: January (KL); June (KL, PG); November (KL)<br>Year 2 Intake: June (KL, PG)"]
     };
 
-    // Event listeners to update comparison table when a course is selected
-    courseSelectTop1.addEventListener('change', () => {
-        updateComparisonTable(courseSelectTop1.value);
-    });
+   // Get references to the course selection elements and the comparison data cells
+const courseSelectElements = {
+    top1: document.getElementById('courseSelectTop1'),
+    top2: document.getElementById('courseSelectTop2'),
+};
 
-    courseSelectTop2.addEventListener('change', () => {
-        updateComparisonTable2(courseSelectTop2.value);
-    });
+const attributeCells = {
+    first: [
+        document.getElementById('firstAttribute'),
+        document.getElementById('firstAttribute2'),
+        document.getElementById('firstAttribute3'),
+        document.getElementById('firstAttribute4'),
+        document.getElementById('firstAttribute5'),
+    ],
+    third: [
+        document.getElementById('thirdAttribute'),
+        document.getElementById('thirdAttribute2'),
+        document.getElementById('thirdAttribute3'),
+        document.getElementById('thirdAttribute4'),
+        document.getElementById('thirdAttribute5'),
+    ],
+};
 
-    function updateComparisonTable(selectedCourse) {
-        if (selectedCourse in courseData) {
-            // Update the first column based on the selected course
-            firstAttributeCell.textContent = courseData[selectedCourse][0]; // First column
-            firstAttributeCell2.textContent = courseData[selectedCourse][1]; 
-            firstAttributeCell3.innerHTML = courseData[selectedCourse][2]; 
-            firstAttributeCell4.innerHTML = courseData[selectedCourse][3]; 
-            console.log(firstAttributeCell4.textContent);
-            firstAttributeCell5.innerHTML = courseData[selectedCourse][4]; 
-            
-        } else {
-            // Clear the comparison table when no course is selected
-            firstAttributeCell.textContent = '';
-            firstAttributeCell2.textContent = '';
-            firstAttributeCell3.innerHTML = '';
-            firstAttributeCell4.innerHTML = '';
-            firstAttributeCell5.innerHTML = '';
+// Event listeners to update comparison table when a course is selected
+courseSelectElements.top1.addEventListener('change', () => {
+    updateComparisonTable(courseSelectElements.top1, 'first');
+});
+
+courseSelectElements.top2.addEventListener('change', () => {
+    updateComparisonTable(courseSelectElements.top2, 'third');
+});
+
+function updateComparisonTable(selectedCourseElement, column) {
+    const selectedCourse = selectedCourseElement.value;
+    const courseAttributes = courseData[selectedCourse];
+
+    if (courseAttributes) {
+        // Update the corresponding column based on the selected course
+        const attributeCell = attributeCells[column];
+
+        for (let i = 0; i < courseAttributes.length; i++) {
+            attributeCell[i].innerHTML = courseAttributes[i];
+        }
+    } else {
+        // Clear the comparison table when no course is selected
+        const attributeCell = attributeCells[column];
+
+        for (let i = 0; i < attributeCell.length; i++) {
+            attributeCell[i].innerHTML = '';
         }
     }
-
-    function updateComparisonTable2(selectedCourse) {
-        if (selectedCourse in courseData) {
-            // Update the first column based on the selected course
-           
-            thirdAttributeCell.textContent = courseData[selectedCourse][0]; // Third column
-            thirdAttributeCell2.textContent = courseData[selectedCourse][1]; // Third column
-            thirdAttributeCell3.innerHTML = courseData[selectedCourse][2]; // Third column
-            thirdAttributeCell4.innerHTML = courseData[selectedCourse][3]; // Third column
-            thirdAttributeCell5.innerHTML = courseData[selectedCourse][4]; // Third column
-        } else {
-            // Clear the comparison table when no course is selected
-            thirdAttributeCell.textContent = '';
-            thirdAttributeCell2.textContent = '';
-            thirdAttributeCell3.innerHTML = '';
-            thirdAttributeCell4.innerHTML  = '';
-            thirdAttributeCell5.innerHTML  = '';
-        }
-    }
+}
