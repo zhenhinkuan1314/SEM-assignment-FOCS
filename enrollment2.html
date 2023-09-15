@@ -60,15 +60,17 @@
         </div>
 
         <!--------------- qualification check --------------->
-        <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8" id="page1" style="display: block;">
             <div class="mx-auto max-w-lg">
               <h1 class="text-center text-2xl font-bold text-indigo-600 sm:text-3xl">
                 Qualification check
               </h1>
           
               <p class="mx-auto mt-4 max-w-md text-center text-gray-500">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati sunt
-                dolores deleniti inventore quaerat mollitia?
+                
+                You will be selecting following options to check qualification. <br>
+                You will have to answer question provided in the next section.
+                
               </p>
           
               <form
@@ -85,11 +87,11 @@
                     </div>
                     <div class="md:w-2/3">
                       <div class="relative">
-                          <select id="levelSelect" onchange="updateQualificationLevelOptions()"
+                          <select id="levelSelect" onchange="updateProgrammOptions()"
                           class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
                             <option>--SELECT LEVEL--</option>
-                            <!-- <option>Diploma</option>
-                          <option>Bachelor</option> -->
+                            <option value="diploma">Diploma</option>
+                          <option value="bachelor">Bachelor</option>
                           
                           </select>
                           <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
@@ -106,7 +108,7 @@
                     </div>
                     <div class="md:w-2/3">
                       <div class="relative">
-                          <select id="programmSelect" onchange="updateStudyYearOptions()"
+                          <select id="programmSelect"
                           class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
                             <option>--SELECT PROGRAMM--</option>
                             <!-- <option>Bachelor of Science (HONOURS) in Managment Mathematirx with Computing</option>
@@ -120,55 +122,385 @@
                     </div>
                   </div>
           
-                <div>
-                  <label for="password" class="sr-only">Password</label>
-          
-                  <div class="relative">
-                    <input
-                      type="password"
-                      class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
-                      placeholder="Enter password"
-                    />
-          
-                    <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-4 w-4 text-gray-400"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                        />
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                        />
-                      </svg>
-                    </span>
-                  </div>
-                </div>
+                
           
                 <button
-                  type="submit"
+                  type="submit" onclick="switchPage()"
                   class="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white"
                 >
-                  Sign in
+                  Start
                 </button>
           
                 <p class="text-center text-sm text-gray-500">
-                  No account?
-                  <a class="underline" href="">Sign up</a>
+                  Other programme?
+                  <a class="underline" href="https://www.tarc.edu.my/focs/a/programmes/programmes/" target="_blank">Check</a>
                 </p>
               </form>
             </div>
           </div>
+
+          <!-- start ask question -->
+
+
+
+         
+
+
+
+          <!--Container-->
+          <div id="page2" style="display: none">
+            <div class="container w-full flex flex-wrap mx-auto px-2 pt-8 lg:pt-16 mt-16" >
+              <div class="w-full lg:w-1/5 px-6 text-xl text-gray-800 leading-normal">
+                  <p class="text-base font-bold py-2 lg:pb-6 text-gray-700">Questions</p>
+                  <div class="block lg:hidden sticky inset-0">
+                      <button id="menu-toggle" class="flex w-full justify-end px-3 py-3 bg-white lg:bg-transparent border rounded border-gray-600 hover:border-yellow-600 appearance-none focus:outline-none">
+                          <svg class="fill-current h-3 float-right" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                          </svg>
+                      </button>
+                  </div>
+                  <div class="w-full sticky inset-0 hidden max-h-64 lg:h-auto overflow-x-hidden overflow-y-auto lg:overflow-y-hidden lg:block mt-0 my-2 lg:my-0 border border-gray-400 lg:border-transparent bg-white shadow lg:shadow-none lg:bg-transparent z-20" style="top:6em;" id="menu-content">
+                      <ul class="list-reset py-2 md:py-0">
+                          <li class="py-1 md:my-2 hover:bg-yellow-100 lg:hover:bg-transparent border-l-4 border-transparent font-bold border-yellow-600">
+                              <a href='#section1' class="block pl-4 align-middle text-gray-700 no-underline hover:text-yellow-600">
+                                  <span class="pb-1 md:pb-0 text-sm">SPM/O Level</span>
+                              </a>
+                          </li>
+                          <li class="py-1 md:my-2 hover:bg-yellow-100 lg:hover:bg-transparent border-l-4 border-transparent">
+                              <a href='#section2' class="block pl-4 align-middle text-gray-700 no-underline hover:text-yellow-600">
+                                  <span class="pb-1 md:pb-0 text-sm">STPM/A level/UEC</span>
+                              </a>
+                          </li>
+                          
+                          
+                      </ul>
+                  </div>
+              </div>
+        
+              <!--Section container-->
+              <section class="w-full lg:w-4/5">
+        
+                  <!--Title-->
+                  <h1 class="flex items-center font-sans font-bold break-normal text-gray-700 px-2 text-xl mt-12 lg:mt-0 md:text-2xl">
+              Questions
+            </h1>
+        
+                  <!--divider-->
+                  <hr class="bg-gray-300 my-12">
+        
+                  <!--Title-->
+                  <h2 id='section1' class="font-sans font-bold break-normal text-gray-700 px-2 pb-8 text-xl">SPM/O Level</h2>
+                  <p class="font-sans  break-normal text-gray-700 px-2 pb-8 ">
+                    Ex-TARCians and applicants from other institution of higher learning with SPM/O Level/equivalent results are also required to complete this section.
+                  </p>
+                   <!--Card-->
+                   <div id='section2' class="p-8 mt-6 lg:mt-0 rounded shadow bg-white">
+        
+                    <form id="spmForms">
+        
+                        <div class="md:flex mb-6">
+                            <div class="md:w-1/3">
+                                <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0 pr-4" for="my-textfield">
+                                  Select Your Achievement <br>on SPM subjects
+                                </label>
+                            </div>
+                            <div class="md:w-2/3">
+                              <div class="relative">
+                                <select id="question1A"
+                                class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                                <option value="empty">-</option>
+                                <option value="yes">I get 3 Credit and above</option>
+                                <option value="no">I get 2 Credit and below</option>
+                                <option value="never">No I did not take SPM</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                    <!-- <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg> -->
+                                </div>
+                                </div>
+                                <p class="py-2 text-sm text-gray-600">(Mathematics, Additional Mathematics, Physics, Chemistry, Biology, ICT subjects)</p>
+                            </div>
+                        </div>
+        
+                        
+        
+                      <div class="md:flex mb-6">
+                        <div class="md:w-1/3">
+                            <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0 pr-4" for="my-textfield">
+                                Did you get SPM : Credit 
+                            </label>
+                        </div>
+                        <div class="md:w-2/3">
+                          <div class="relative">
+                            <select id="question2A" 
+                                    class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                                    <option value="empty">-</option>
+                                    <option value="Additional Mathematics">Yes</option>
+                                    <option >No</option>
+                                    <option >No I did not take above subjects</option>
+                                    </select>
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                        <!-- <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg> -->
+                                    </div>
+                            </div>
+                            <p class="py-2 text-sm text-gray-600">( SPM : Additional Mathematics )</p>
+                        </div>
+                    </div>
+        
+                    <div class="md:flex mb-6">
+                      <div class="md:w-1/3">
+                          <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0 pr-4" for="my-textfield">
+                            Did you get SPM : Credit 
+                          </label>
+                      </div>
+                      <div class="md:w-2/3">
+                        <div class="relative">
+                          <select id="question2B" 
+                                    class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                                    <option value="empty">-</option>
+                                    <option value="Mathematics">Yes</option>
+                                    <option>No</option>
+                                    <option>No I did not take above subjects</option>
+                                    </select>
+                          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                              <!-- <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg> -->
+                          </div>
+                          </div>
+                          <p class="py-2 text-sm text-gray-600">( SPM : Mathematics)</p>
+                      </div>
+                  </div>
+        
+        
+                  <div class="md:flex mb-6">
+                    <div class="md:w-1/3">
+                        <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0 pr-4" for="my-textfield">
+                          Did you get SPM : Pass 
+                        </label>
+                    </div>
+                    <div class="md:w-2/3">
+                      <div class="relative">
+                        <select id="question2C" 
+                                  class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                                  <option value="empty">-</option>
+                                  <option value="English Language">Yes</option>
+                                  <option>No</option>
+                                  <option>No I did not take above subjects</option>
+                                  </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                            <!-- <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg> -->
+                        </div>
+                        </div>
+                        <p class="py-2 text-sm text-gray-600">(English Language**)</p>
+                    </div>
+                </div>
+                      
+        
+                        <div class="md:flex md:items-center"  >
+                            <div class="md:w-1/3"></div>
+                            <div class="md:w-2/3" id="diplomaSubmit">
+                                <button onclick="checkDiploma()" 
+                                class="shadow bg-yellow-700 hover:bg-yellow-500 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+                                    Save
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+        
+                </div>
+                <!--/Card-->
+        
+                  <!--divider-->
+                  <hr class="bg-gray-300 my-12">
+        
+                  <!--Title-->
+                  <h2 class="font-sans font-bold break-normal text-gray-700 px-2 pb-8 text-xl">STPM/A level/UEC</h2>
+                  <p class="font-sans  break-normal text-gray-700 px-2 pb-8 ">
+                    Applicants with UEC and SPM are also to complete the above SPM section.
+                  </p>
+                  <!--Card-->
+                  <div id='section2' class="p-8 mt-6 lg:mt-0 rounded shadow bg-white">
+        
+                    <form id="stpmForms" >
+        
+                      <div class="md:flex mb-6">
+                          <div class="md:w-1/3">
+                              <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0 pr-4" for="my-textfield">
+                                Select Your Achievement <br> on STPM subjects
+                              </label>
+                          </div>
+                          <div class="md:w-2/3">
+                            <div class="relative">
+                              <select id="question1B" 
+                              class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                              <option value="empty">-</option>
+                              <option value="yes">I get 2 Grade C and above</option>
+                              <option value="no">I get 1 Grade C and below</option>
+                              <option value="never">No I did not take STPM</option>
+                              </select>
+                              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                  <!-- <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg> -->
+                              </div>
+                              </div>
+                              <p class="py-2 text-sm text-gray-600">(Mathematics relevant, Physics, Chemistry, Biology, ICT subjects)</p>
+                          </div>
+                      </div>
+        
+                      
+                   
+        
+                    <div class="md:flex mb-6">
+                      <div class="md:w-1/3">
+                          <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0 pr-4" for="my-textfield">
+                            Did you get SPM : Credit 
+                          </label>
+                      </div>
+                      <div class="md:w-2/3">
+                        <div class="relative">
+                          <select id="question3A" 
+                                    class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                                    <option value="empty">-</option>
+                                    <option value="Additional Mathematics">Yes</option>
+                                    <option>No</option>
+                                    <option>No I did not take above subjects</option>
+                                    </select>
+                            
+                          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                              <!-- <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg> -->
+                          </div>
+                          </div>
+                          <p class="py-2 text-sm text-gray-600">( SPM : Additional Mathematics)</p>
+                      </div>
+                  </div>
+        
+                  <div class="md:flex mb-6">
+                    <div class="md:w-1/3">
+                        <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0 pr-4" for="my-textfield">
+                          Did you get SPM : Credit 
+                        </label>
+                    </div>
+                    <div class="md:w-2/3">
+                      <div class="relative">
+                        <select id="question3B"
+                                    class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                                    <option value="empty">-</option>
+                                    <option value="ICT subjects">Yes</option>
+                                    <option>No</option>
+                                    <option>No I did not take above subjects</option>
+                                    </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                            <!-- <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg> -->
+                        </div>
+                        </div>
+                        <p class="py-2 text-sm text-gray-600">(SPM : Science/Technology/enginerring)</p>
+                    </div>
+                </div>
+        
+                <div class="md:flex mb-6">
+                  <div class="md:w-1/3">
+                      <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0 pr-4" for="my-textfield">
+                        Did you get SPM : Credit 
+                      </label>
+                  </div>
+                  <div class="md:w-2/3">
+                    <div class="relative">
+                      <select id="question3C"
+                                  class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                                  <option value="empty">-</option>
+                                  <option value="Mathematics">Yes</option>
+                                  <option>No</option>
+                                  <option>No I did not take above subjects</option>
+                                  </select>
+                      <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                          <!-- <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg> -->
+                      </div>
+                      </div>
+                      <p class="py-2 text-sm text-gray-600">( SPM : Mathematics) </p>
+                  </div>
+              </div>
+        
+                <div class="md:flex mb-6">
+                  <div class="md:w-1/3">
+                      <label class="block text-gray-600 font-bold md:text-left mb-3 md:mb-0 pr-4" for="my-textfield">
+                        Did you get SPM : Pass 
+                      </label>
+                  </div>
+                  <div class="md:w-2/3">
+                    <div class="relative">
+                      <select id="question3D"
+                                class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                                <option value="empty">-</option>
+                                <option value="English Language">Yes</option>
+                                <option>No</option>
+                                <option>No I did not take above subjects</option>
+                                </select>
+                      <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                          <!-- <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg> -->
+                      </div>
+                      </div>
+                      <p class="py-2 text-sm text-gray-600">(English Language**)</p>
+                  </div>
+              </div>
+        
+                    
+        
+                      <div class="md:flex md:items-center">
+                          <div class="md:w-1/3"></div>
+                          <div class="md:w-2/3">
+                              <button onclick="checkDiploma()"
+                              class="shadow bg-yellow-700 hover:bg-yellow-500 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+                                  Save
+                              </button>
+                          </div>
+                      </div>
+                  </form>
+        
+                  </div>
+                  <!--/Card-->
+        
+                  
+        
+                  </section>
+                </div>
+                <br>
+          </div>
+   
+
+        <!--------------- qualification result --------------->
+        <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8" id="page3" style="display: none">
+          <div class="mx-auto max-w-lg">
+            <h1 class="text-center text-2xl font-bold  sm:text-3xl">
+              Qualification Result
+            </h1>
+        
+            
+        
+            <form
+              action=""
+              class="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8"
+            >
+
+              <div id="qualifyResult">
+
+              </div>
+              
+        
+              
+        
+              <button
+                type="submit" onclick="switchPage()"
+                class="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white"
+              >
+                Restart
+              </button>
+        
+              <p class="text-center text-sm text-gray-500">
+                Other programme?
+                <a class="underline" href="https://www.tarc.edu.my/focs/a/programmes/programmes/" target="_blank">Check</a>
+              </p>
+            </form>
+          </div>
+        </div>
+
+        
 </body>
 
 
@@ -273,5 +605,368 @@
                 
         </div>
     </footer>
+
+    <script>
+      
+      const diploma = [
+        {
+          courseName : 'Diploma in Computer Science',
+          SPMRequirement : ['Additional Mathematics', 'English Language'],
+        }, 
+        {
+          courseName : "Diploma in Information Systems", 
+          SPMRequirement : ["Mathematics", "English Language"],
+        },
+        {
+          courseName : "Diploma in Information Technology", 
+          SPMRequirement : ["Mathematics", "English Language"],
+        },
+        {
+          courseName : "Diploma in Software Engineering", 
+          SPMRequirement : ["Mathematics", "English Language"],
+        },
+      ]
+
+      const bachelor = [
+      {
+          courseName : 'Bachelor of Science (HONOURS) in Managment Mathematirx with Computing',
+          SPMRequirement : ["Mathematics", "English Language"],
+        }, 
+        {
+          courseName : "Bachelor of Computer Science (HONOURS) in Interactive Software Technology", 
+          SPMRequirement : ["Additional Mathematics", "English Language"],
+          SPMRequirement2 : ["Mathematics", "ICT subjects", "English Language"],
+        },
+        {
+          courseName : "Bachelor of Software Engineering (Honours)", 
+          SPMRequirement : ["Additional Mathematics", "English Language"],
+          SPMRequirement2 : ["Mathematics", "ICT subjects", "English Language"],
+        },
+        {
+          courseName : "Bachelor of Computer Science (HONOURS) in Data Science", 
+          SPMRequirement : ["Mathematics", "English Language"],
+        },
+      ]
+
+
+      function updateProgrammOptions(){
+        
+        const levelSelect = document.getElementById("levelSelect");
+        const programmSelect = document.getElementById("programmSelect");
+        //const qualicationLevelSelect = document.getElementById("qualicationLevelSelect");
+        const spmForms = document.getElementById("spmForms");
+        const stpmForms = document.getElementById("stpmForms");
+        const diplomaSubmit = document.getElementById("diplomaSubmit");
+
+        const selectedLevel = levelSelect.value;
+            const selectedProgramm = programmSelect.value;
+            //const selectedQualicationLevel = qualicationLevelSelect.value;
+        if (selectedLevel == "--SELECT LEVEL--"){
+          programmSelect.innerHTML = "<option>--SELECT PROGRAMM--</option>";
+
+          spmForms.style.display = 'none';
+          stpmForms.style.display = 'none';
+        }else if (selectedLevel == "diploma"){
+          spmForms.style.display = 'block';
+          stpmForms.style.display = 'none';
+          diplomaSubmit.style.display = "inline";
+         
+
+          
+        }else if (selectedLevel == "bachelor"){
+          spmForms.style.display = 'none';
+          stpmForms.style.display = 'block';
+          diplomaSubmit.style.display = "none";
+          
+          
+
+          
+        }
+
+        let finalFilterResult = [];
+        if (selectedLevel == "diploma"){
+            finalFilterResult = diploma.map(course => course.courseName);
+
+          
+        }
+        else{
+            finalFilterResult = bachelor.map(course => course.courseName);
+
+        }
+
+        programmSelect.innerHTML = "";
+
+                programmSelect.innerHTML = '<option value="--SELECT PROGRAMM--">--SELECT PROGRAMM--</option>';
+
+                
+                    // Loop through the uniqueCampuses array and create options
+                    finalFilterResult.forEach(campus => {
+                        const option = document.createElement("option");
+                        option.value = campus;  // Assign the campus name as the option value
+                        option.textContent = campus ;  // Display the campus name with "Campus" text
+                        programmSelect.appendChild(option);
+                    });
+      }
+
+      function removeOuterArray(e){
+        const flattenedCampuses = e.reduce((acc, curr) => acc.concat(curr), []);
+
+        // Step 2: Convert to a Set to remove duplicates
+        const uniqueCampusesSet = new Set(flattenedCampuses);
+
+        // Step 3: Convert back to an array to get the unique campuses
+        const uniqueCampuses = [...uniqueCampusesSet];
+
+        return uniqueCampuses;
+      }
+
+      function checkDiploma(){
+        let QualifyResult = false;
+
+        const levelSelect = document.getElementById("levelSelect");
+        const programmSelect = document.getElementById("programmSelect");
+        const question1A = document.getElementById("question1A");
+        const question1B = document.getElementById("question1B");
+        //const question2 = question2.getDocumentByid("question2");
+
+        //if question1 = false
+        //return 
+
+        const Answer1A = question1A.value;
+        const Answer1B = question1B.value;
+
+        
+
+        if(levelSelect.value == "diploma"){
+          if(Answer1A == "empty"){
+            window.alert("it seems some field are empty");
+            return;
+          }
+
+          if(Answer1A == "no" || Answer1A == "never"){
+          QualifyResult = false;
+          
+            printResult(QualifyResult);
+            switchPage();
+        }
+        }else if (levelSelect.value == "bachelor"){
+          if(Answer1B == "empty"){
+            window.alert("it seems some field are empty");
+            return;
+          }
+
+            if(Answer1B == "no" || Answer1B == "never"){
+              QualifyResult = false;
+              printResult(QualifyResult);
+              switchPage();
+            }
+        }
+
+        
+
+
+
+
+        //get courseName array, SPM requirement, if yes then remove from array, if the end array is empty, prompt success
+        let question2A, question2B, question2C, question2D = "";
+        
+        if(levelSelect.value == "diploma"){
+          removingElement = [
+          document.getElementById("question2A").value,
+          document.getElementById("question2B").value,
+          document.getElementById("question2C").value,
+          ];
+
+          
+        }
+          else if (levelSelect.value == "bachelor"){
+            removingElement = [
+            document.getElementById("question3A").value,
+            document.getElementById("question3B").value,
+            document.getElementById("question3C").value,
+            document.getElementById("question3D").value,
+            ];
+          }
+        
+          for(let i = 0; i < removingElement.length; i++){
+            if(removingElement[i] == "empty"){
+              window.alert("it seems some field are empty");
+              return;
+            }
+
+          }
+
+
+          //now getting array of course
+          let finalFilterResult = [];
+          if(levelSelect.value == "diploma"){
+            finalFilterResult = diploma.filter(course => course.courseName.includes(programmSelect.value));
+          }else if (levelSelect.value == "bachelor"){
+            finalFilterResult = bachelor.filter(course => course.courseName.includes(programmSelect.value));
+          }
+
+          let finalFilterSPMRequirement = finalFilterResult.map(course => course.SPMRequirement);
+          let finalFilterSPMRequirement2 = finalFilterResult.map(course => course.SPMRequirement2);
+
+          finalFilterSPMRequirement = removeOuterArray(finalFilterSPMRequirement);
+          finalFilterSPMRequirement2 = removeOuterArray(finalFilterSPMRequirement2);
+
+
+
+          for (let i = 0; i < removingElement.length; i++) {
+            for (let j = 0; j < finalFilterSPMRequirement.length; j++) {
+              
+              if (removingElement[i] === finalFilterSPMRequirement[j]) {
+                finalFilterSPMRequirement.splice(j, 1);
+                j--;
+              
+              }
+            }
+          }
+
+        //if array not empty, move on to 2nd array 
+
+        //still not empty, prompt error 
+        if (finalFilterSPMRequirement.length === 0) {
+          // Prompt success
+          QualifyResult = true;
+          //moving to next result page
+          
+        }else{
+          for (let i = 0; i < removingElement.length; i++) {
+            for (let j = 0; j < finalFilterSPMRequirement2.length; j++) {
+              
+              if (removingElement[i] === finalFilterSPMRequirement2[j]) {
+                finalFilterSPMRequirement2.splice(j, 1);
+                j--;
+              
+              }
+            }
+          }
+
+          if (finalFilterSPMRequirement2.length === 0) {
+            // Prompt success
+            //moving to next result page
+            QualifyResult = true;
+            
+          }
+          else{
+            QualifyResult = false;
+
+          }
+
+        
+
+
+        //if 
+        }
+
+        
+        printResult(QualifyResult);
+        switchPage();
+      }
+
+      function printResult(QualifyResult){
+        if (QualifyResult == true){
+          document.getElementById("qualifyResult").innerHTML = "<p class='text-center text-lg font-medium text-lime-600'>Successful</p>" + 
+                                                                '<p class="mx-auto mt-4 max-w-md text-center text-gray-500">Congrats!! You are qualified for your selected Subject <br><a class="underline text-gray-400" href="https://www.tarc.edu.my/account/login.jsp?fappcode=online-app" target="_blank">Proceed to Application</a></p>';
+        }else{
+          document.getElementById("qualifyResult").innerHTML = "<p class='text-center text-lg font-medium text-red-600'>Unsuccessful</p>" + 
+                                                                '<p class="mx-auto mt-4 max-w-md text-center text-gray-500">Oops!! It seems you are not qualified for your selected Subject <br><a class="underline text-gray-400" href="https://www.tarc.edu.my/focs/a/programmes/programmes/" target="_blank">Check Entry Requirement</a></p>';
+        }
+      }
+
+      function switchPage(){
+        const page1 = document.getElementById("page1");
+        const page2 = document.getElementById("page2");
+        const page3 = document.getElementById("page3");
+        
+        
+        if(page1.style.display == "block"){
+          if(document.getElementById("levelSelect").value == "--SELECT LEVEL--" || document.getElementById("programmSelect").value == "--SELECT PROGRAMM--"){
+            window.alert("it seems some field are empty");
+            return;
+          }
+
+          page1.style.display = "none";
+          page2.style.display = "block";
+          page3.style.display = "none";
+        }
+        else if(page2.style.display == "block"){
+          page1.style.display = "none";
+          page2.style.display = "none";
+          page3.style.display = "block";
+        }
+        else if(page3.style.display == "block"){
+          page1.style.display = "block";
+          page2.style.display = "none";
+          page3.style.display = "none";
+        }
+      }
+
+
+
+
+    </script>
+
+    <!-- Toggle dropdown list -->
+  
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  
+  <!-- Scroll Spy -->
+  <script>
+  /* http://jsfiddle.net/LwLBx/ */
+  
+  // Cache selectors
+  var lastId,
+      topMenu = $("#menu-content"),
+      topMenuHeight = topMenu.outerHeight()+175,
+      // All list items
+      menuItems = topMenu.find("a"),
+      // Anchors corresponding to menu items
+      scrollItems = menuItems.map(function(){
+        var item = $($(this).attr("href"));
+        if (item.length) { return item; }
+      });
+  
+  // Bind click handler to menu items
+  // so we can get a fancy scroll animation
+  menuItems.click(function(e){
+    var href = $(this).attr("href"),
+        offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+    $('html, body').stop().animate({ 
+        scrollTop: offsetTop
+    }, 300);
+    if (!helpMenuDiv.classList.contains("hidden")) {
+      helpMenuDiv.classList.add("hidden");
+      }
+    e.preventDefault();
+  });
+  
+  // Bind to scroll
+  $(window).scroll(function(){
+     // Get container scroll position
+     var fromTop = $(this).scrollTop()+topMenuHeight;
+  
+     // Get id of current scroll item
+     var cur = scrollItems.map(function(){
+       if ($(this).offset().top < fromTop)
+         return this;
+     });
+     // Get the id of the current element
+     cur = cur[cur.length-1];
+     var id = cur && cur.length ? cur[0].id : "";
+  
+     if (lastId !== id) {
+         lastId = id;
+         // Set/remove active class
+         menuItems
+           .parent().removeClass("font-bold border-yellow-600")
+           .end().filter("[href='#"+id+"']").parent().addClass("font-bold border-yellow-600");
+     }                   
+  });
+  
+  </script>
 
     </html>
