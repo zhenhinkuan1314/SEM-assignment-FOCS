@@ -39,53 +39,54 @@ const chat = {
         text: 'Which question you would like to ask?',
         options: [
             {
-                text: "What are the Programme offered?",
+                text: "What is the course offered",
                 next: 6
             }, 
             {
-                text: "When are TAR UMT intakes?",
+                text: "When is the intake?",
                 next: 7
             },
             {
-                text: "Who are TAR UMT Staff directory?",
+                text: "What is the enrollment course?",
                 next: 8
+            },
+            {
+                text: "Who are TAR UMT Staff directory?",
+                next: 9
             }
+            
         ]
     },
     5: {
         text: 'Alright, if any question to ask, please don\'t hesitate to ask me!',
     },
     6: {
-        text: 'Here are several questions about Programme',
+        text: 'To know more about the course offered..',
         options: [
             {
-                text: "What are the Bachelor and Diploma programmes offered?",
-                next: 9
-            },
-            {
-                text: "What are the Foundation programmes offered",
-                next: 10
-            },
+                text: "Go to the compare course page",
+                url: "comparisonTable.html",
+            }
         ]
     },
     7: {
         text: 'Our intakes are in February, June, October and November. \n The June Intakes is the Main Intake.',
     },
-    9: {
-        text: 'For Bachelor Degree and Diploma programmes offered',
+    8: {
+        text: 'To check more about the enrollment..',
         options: [
             {
-                text: "Go to Bachelor Degree and Diploma programmes",
-                url: "https://www.tarc.edu.my/admissions/programmes/programme-offered-a-z/undergraduate-programme/",
+                text: "Go to the enrollment page",
+                url: "enrollment2.html",
             }
         ]
     },
-    10: {
-        text: 'For Foundation programmes offered',
+    9: {
+        text: "About Staff Directory",
         options: [
             {
-                text: "Go to Foundation programmes",
-                url: "https://www.tarc.edu.my/admissions/programmes/programme-offered-a-z/pre-university-programme/",
+                text: "Go to staff directory",
+                url: "Staff_Directory.html"
             }
         ]
     },
@@ -98,16 +99,6 @@ const chat = {
             }
         ]
     },
-    8: {
-        text: "About Staff Directory",
-        options: [
-            {
-                text: "Go to staff directory",
-                url: "https://www.tarc.edu.my/staffDirectory.jsp?fdept=FOCS&fbrncd=KL&fdivcd="
-            }
-        ]
-    }
-
 
     /*
     4: {
