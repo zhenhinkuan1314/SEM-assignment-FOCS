@@ -13,32 +13,48 @@
 
 .course-card {
     display: grid;
-    grid-template-columns: repeat(auto-fill, mixmax(150px, 1fr));
-    gap: .1rem;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: .25rem; 
     margin-top: 1rem;
 }
 
 .card-container {
     border: 1px solid black;
-    padding: .5rem;
-    padding-left: 20px;
-    margin-top: 10px;
-    margin-left: 50px;
-    margin-right: 50px;
     background-color: #FFFAFA;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
     border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    transition: background-color 0.3s;
+}
+
+.card-container:hover {
+    background-color: #ffebeb;
 }
 
 .card-title {
     margin-bottom: .25rem;
     font-size: 16px;
+    text-align: center;
+    font-weight: 700;
 }
 
 .card-desc {
-    font-size: 13px;
-    color: #86888a
+    font-size: 14px;
+    color: #86888a;
+    text-align: center;
+    font-weight: 500;
 }
 
 .hide {
     display: none;
+}
+
+.pointer {
+    cursor: pointer;
 }
