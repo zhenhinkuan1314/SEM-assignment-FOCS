@@ -919,6 +919,8 @@
       }
 
       function switchPage(){
+        event.preventDefault(); // Prevent the default form submission behavior
+
         const page1 = document.getElementById("page1");
         const page2 = document.getElementById("page2");
         const page3 = document.getElementById("page3");
