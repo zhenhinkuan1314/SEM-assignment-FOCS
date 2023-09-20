@@ -7,42 +7,42 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       title: "Diploma in Computer Science",
       description: "Students are trained in both theoretical knowledge and practical skills for software development, system design and related mathematical techniques. ",
-      link: "https://www.tarc.edu.my/focs/programmes/diploma/diploma-in-computer-science/",
+      link: "diploma.html",
     },
     {
       title: "Diploma in Information Systems",
       description: "This program focuses on business information systems, providing IT and business knowledge, including system development, management, accounting, and practical skills.",
-      link: "https://www.tarc.edu.my/focs/programmes/diploma/diploma-in-information-systems/",
+      link: "diploma.html",
     },
     {
       title: "Diploma in Information Technology",
       description: "This program imparts essential computing skills for modern organizations, covering programming, databases, and IT principles, preparing graduates for various roles.",
-      link: "https://www.tarc.edu.my/focs/programmes/diploma/diploma-in-information-technology/",
+      link: "diploma.html",
     },
     {
       title: "Diploma in Software Engineering",
       description: "This program offers software engineering knowledge, analytical thinking, managerial skills, and fosters innovation for future opportunities in the field.",
-      link: "https://www.tarc.edu.my/focs/programmes/diploma/diploma-in-software-engineering/",
+      link: "diploma.html",
     },
     {
       title: "Bachelor of Science (Honours) in Management Mathematics with Computing",
       description: "This program combines Management Mathematics, Computing, and Economics/Accounting, offering skills in math, computing, and preparing for diverse academic and professional pursuits.",
-      link: "https://www.tarc.edu.my/focs/programmes/bachelor-degree/bachelor-of-science-honours-in-management-mathematics-with-computing/",
+      link: "bachelor.html",
     },
     {
       title: "Bachelor of Computer Science (Honours) in Interactive Software Technology",
       description: "This program focuses on computer science, emphasizing interactive software development for various applications, including games, simulations, and educational tools. Students study a range of relevant subjects and can choose electives for specialization.",
-      link: "https://www.tarc.edu.my/focs/programmes/bachelor-degree/bachelor-of-computer-science-honours-in-interactive-software-technology/",
+      link: "bachelor.html",
     },
     {
       title: "Bachelor of Software Engineering (Honours)",
       description: "This program focuses on implementing enterprise information systems, integrating various business functions to enhance organizational performance. It covers core computing and specialized subjects, offering electives and industrial training for practical experience and improved employment prospects.",
-      link: "https://www.tarc.edu.my/focs/programmes/bachelor-degree/bachelor-of-computer-science-honours-in-software-engineering/",
+      link: "bachelor.html",
     },
     {
       title: "Bachelor of Computer Science (Honours) in Data Science",
       description: "This program combines computer science and data science, preparing graduates for in-demand roles in data analysis and AI. It covers various specialized courses and offers real-world experience through industrial training, including a SAS Joint Certificate in Data Science and Machine Learning upon completion.",
-      link: "https://www.tarc.edu.my/focs/programmes/bachelor-degree/bachelor-of-computer-science-honours-in-data-science/",
+      link: "bachelor.html",
     },
   ];
 
