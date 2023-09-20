@@ -2,10 +2,13 @@
 body {
     background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.99)), url("../images/background.jpg");
     background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.7)), url("../images/banner2.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.7)), url("../images/banner2.png");
     background-size: cover;
 }
 
@@ -66,6 +69,7 @@ body {
     background-color: white;
     z-index: 3;
 }
+
 #chatbot-inner {
     height: 100%;
     overflow-y: scroll;
@@ -76,14 +80,18 @@ body {
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
-#chatbot-inner::-webkit-scrollbar { 
-    display: none;  /* Chrome Safari */
+
+#chatbot-inner::-webkit-scrollbar {
+    display: none;
+    /* Chrome Safari */
 }
 
 .chat-response,
 .chat-ask {
-    opacity: 0;  /* Set to activated to show */
-    transform: translateY(-50%); /* Set to activated to move down */
+    opacity: 0;
+    /* Set to activated to show */
+    transform: translateY(-50%);
+    /* Set to activated to move down */
     transition: all 0.3s 0.3s;
     border-radius: 12px;
     background-color: hsl(0, 0%, 90%);
@@ -93,10 +101,12 @@ body {
     width: 80%;
     margin-bottom: 0.5rem;
 }
+
 .chat-response {
     margin-left: 26px;
     position: relative;
 }
+
 .chat-response:before {
     display: block;
     content: '';
@@ -111,61 +121,69 @@ body {
     background-size: 100%;
     border-radius: 100%;
 }
+
 .chat-ask {
-  background-color: hsl(207, 96%, 55%);
-  margin-right: 0;
-  margin-left: auto;
-  color: hsl(0, 0%, 100%);
+    background-color: hsl(207, 96%, 55%);
+    margin-right: 0;
+    margin-left: auto;
+    color: hsl(0, 0%, 100%);
 }
+
 .choices {
-  opacity: 0; /* Set to active to show */
-  transform: translateY(-50%); /* Set to activated to move down */
-  transition: all 0.3s 0.3s;
-  transition: opacity 0.3s 0.3s;
-  margin-top: 0.5rem;
-  margin-left: 22px;
+    opacity: 0;
+    /* Set to active to show */
+    transform: translateY(-50%);
+    /* Set to activated to move down */
+    transition: all 0.3s 0.3s;
+    transition: opacity 0.3s 0.3s;
+    margin-top: 0.5rem;
+    margin-left: 22px;
 }
+
 .choice {
-  display: inline-block;
-  outline: none;
-  border: 1px solid hsl(0, 0%, 0%);
-  padding: 0.3rem 0.8rem;
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 1rem;
-  font-size: 0.9rem;
-  line-height: 1.3;
-  margin-bottom: 0.5rem;
-  margin-right: 0.5rem;
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
+    display: inline-block;
+    outline: none;
+    border: 1px solid hsl(0, 0%, 0%);
+    padding: 0.3rem 0.8rem;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
+
 .choice:disabled {
-  color: hsl(0, 0%, 80%);
-  border-color: hsl(0, 0%, 80%);
+    color: hsl(0, 0%, 80%);
+    border-color: hsl(0, 0%, 80%);
 }
+
 .activated {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
+
 .restart {
-  position: absolute;
-  bottom: 0.5rem;
-  right: 0.5rem;
-  outline: none;
-  font-size: 12px;
-  color: hsl(0, 0%, 50%);
-  box-shadow: none;
-  border: 1px solid hsl(0, 0%, 60%);
-  border-radius: 1rem;
-  background: hsl(0, 0%, 100%);
-  padding: 0.2rem 0.5rem;
-  cursor: pointer;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    outline: none;
+    font-size: 12px;
+    color: hsl(0, 0%, 50%);
+    box-shadow: none;
+    border: 1px solid hsl(0, 0%, 60%);
+    border-radius: 1rem;
+    background: hsl(0, 0%, 100%);
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
 }
 
 main {
-    position: fixed; 
-    top: 10rem; 
+    position: fixed;
+    top: 10rem;
     right: 3rem;
     box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
     width: 400px;
@@ -200,7 +218,3 @@ main {
 
 
 /* ---------- FAQ Selection Button ---------- */
-
-
-
-

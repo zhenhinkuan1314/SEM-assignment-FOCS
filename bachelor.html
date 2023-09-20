@@ -6,31 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TARUMT</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!----- Link to fontawesome ----->
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!---- Customise Tailwind-->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@1.6.4/dist/flowbite.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@1.6.4/dist/flowbite.min.css" rel="stylesheet">
 
     <!----- Google Fonts Link For Icons ----->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
     <!----- Customise CSS ----->
+    <link rel="stylesheet" type="text/css" href="styles/coursedetail.css">
     <link rel="stylesheet" type="text/css" href="styles/faq.css">
 
-    <!----- Customise Javascript ----->
+    <!----- Customise JavaScript-->
+    <script src="javascript/course.js"></script>
     <script type="text/babel" data-presets="es2015,es2016,es2017" src="/javascript/chatbot.js"></script>
     <script src="/javascript/conversation.js"></script>
 
     <!-- These provide in-browser transpilation of ES6 JS code to ES5 to support IE11 -->
     <script src="https://unpkg.com/@babel/polyfill@7.6.0/dist/polyfill.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
 </head>
 
 <header>
@@ -59,7 +54,6 @@
                         <a href="index.html"
                             class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                             aria-current="page">
-                        <a href="index.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">
                             Home
                         </a>
                     </li>
@@ -98,173 +92,194 @@
                             FAQ
                         </a>
                     </li>
-                    <li>
-                        <a href="facilities.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">
-                            Facilities
-                        </a>
-                    </li>            
                 </ul>
             </div>
         </div>
     </nav>
-
-    <!--------------- Header --------------->
 </header>
 
 <body>
-
-    <!-- Banner -->
-    <div
-        class="banner h-64 md:h-80 lg:h-96 xl:h-128 bg-blue-500 text-white text-center flex items-center justify-center">
-        <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">Compare Programs</h1>
-    </div>
-
-    <!-- Container -->
-    <div class="container my-10 mx-auto md:my-20 md:px-6 xl:px-24">
-
-        <!-- Comparison Table Section -->
-        <section class="mb-10 md:mb-32">
-            <h2 class="mb-6 text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold pl-6 text-center">Comparison Table
-            </h2>
-
-            <div class="comparison-table bg-gray-100 rounded-lg p-4 md:p-8 shadow-md overflow-x-auto">
-                <div class="comparison-table-body">
-                    <table class="table-auto w-full">
-                        <thead>
-                            <tr>
-                                <th class="p-2 md:p-4">
-                                    <div class="flex items-center justify-center">
-                                        <select id="courseSelectTop1"
-                                            class="select md:text-base text-base font-semibold text-gray-900">
-                                            <option value="">Select your course</option>
-                                            <optgroup label="Diploma">
-                                                <option value="Diploma in Computer Science">Diploma in Computer Science
-                                                </option>
-                                                <option value="Diploma in Information Systems">Diploma in Information
-                                                    Systems</option>
-                                                <option value="Diploma in Information Technology">Diploma in Information
-                                                    Technology</option>
-                                                <option value="Diploma in Software Engineering">Diploma in Software
-                                                    Engineering</option>
-                                            </optgroup>
-                                            <optgroup label="Degree">
-                                                <option
-                                                    value="Bachelor of Science (Honours) in Management Mathematics with Computing">
-                                                    Management Mathematics with Computing</option>
-                                                <option
-                                                    value="Bachelor of Computer Science (Honours) in Interactive Software Technology">
-                                                    Interactive Software Technology</option>
-                                                <option value="Bachelor of Software Engineering (Honours)">Bachelor of
-                                                    Software Engineering (Honours)</option>
-                                                <option value="Bachelor of Computer Science (Honours) in Data Science">
-                                                    Bachelor of Computer Science (Honours) in Data Science</option>
-                                            </optgroup>
-                                        </select>
-                                    </div>
-                                </th>
-                                <th class="thead-middle p-2 md:p-4 h-auto text-center font-semibold text-gray-900">
-                                    Attribute</th>
-                                <th class="p-2 md:p-4">
-                                    <div class="flex items-center justify-center">
-                                        <select id="courseSelectTop2"
-                                            class="select md:text-base text-base font-semibold text-gray-900">
-                                            <option value="">Select your course</option>
-                                            <optgroup label="Diploma">
-                                                <option value="Diploma in Computer Science">Diploma in Computer Science
-                                                </option>
-                                                <option value="Diploma in Information Systems">Diploma in Information
-                                                    Systems</option>
-                                                <option value="Diploma in Information Technology"> Diploma in
-                                                    Information Technology </option>
-                                                <option value="Diploma in Software Engineering">Diploma in Software
-                                                    Engineering</option>
-                                            </optgroup>
-                                            <optgroup label="Degree">
-                                                <option
-                                                    value="Bachelor of Science (Honours) in Management Mathematics with Computing">
-                                                    Management Mathematics with Computing</option>
-                                                <option
-                                                    value="Bachelor of Computer Science (Honours) in Interactive Software Technology">
-                                                    Interactive Software Technology</option>
-                                                <option value="Bachelor of Software Engineering (Honours)">Bachelor of
-                                                    Software Engineering (Honours)</option>
-                                                <option value="Bachelor of Computer Science (Honours) in Data Science">
-                                                    Bachelor of Computer Science (Honours) in Data Science</option>
-                                            </optgroup>
-                                        </select>
-                                    </div>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody id="comparisonData" class="bg-white">
-                            <tr class="border-b border-gray-300">
-                                <td class="w-1/2 p-2 md:p-4 h-auto border border-gray-300 font-semibold"
-                                    id="firstAttribute"></td>
-                                <td
-                                    class="p-2 md:p-4 h-auto text-center font-semibold text-gray-900 border border-gray-300">
-                                    <strong>Period</strong></td>
-                                <td class="w-1/2 p-2 md:p-4 h-auto border border-gray-300 font-semibold"
-                                    id="thirdAttribute"></td>
-                            </tr>
-                            <tr class="border-b border-gray-300">
-                                <td class="p-2 md:p-4 h-auto border border-gray-300" id="firstAttribute2"></td>
-                                <td
-                                    class="p-2 md:p-4 h-auto text-center font-semibold text-gray-900 border border-gray-300">
-                                    <strong>Fee</strong></td>
-                                <td class="p-2 md:p-4 h-auto border border-gray-300" id="thirdAttribute2"></td>
-                            </tr>
-                            <tr>
-                                <td class="p-2 md:p-4 h-auto border border-gray-300" id="firstAttribute3"></td>
-                                <td
-                                    class="p-2 md:p-4 h-auto text-center font-semibold text-gray-900 border border-gray-300">
-                                    <strong>Programme Outline</strong></td>
-                                <td class="p-2 md:p-4 h-auto border border-gray-300" id="thirdAttribute3"></td>
-                            </tr>
-                            <tr>
-                                <td class="p-2 md:p-4 h-auto border border-gray-300" id="firstAttribute4"></td>
-                                <td
-                                    class="p-2 md:p-4 h-auto text-center font-semibold text-gray-900 border border-gray-300">
-                                    <strong>Campuses</strong></td>
-                                <td class="p-2 md:p-4 h-auto border border-gray-300" id="thirdAttribute4"></td>
-                            </tr>
-                            <tr>
-                                <td class="p-2 md:p-4 h-auto border border-gray-300" id="firstAttribute5"></td>
-                                <td
-                                    class="p-2 md:p-4 h-auto text-center font-semibold text-gray-900 border border-gray-300">
-                                    <strong>Intake</strong></td>
-                                <td class="p-2 md:p-4 h-auto border border-gray-300" id="thirdAttribute5"></td>
-                            </tr>
-                        </tbody>
-                    </table>
+    <nav class="flex mb-4 nav-margin" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+            <li class="inline-flex items-center">
+                <a href="index.html"
+                    class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+                    <svg class="w-3 h-3 mr-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
+                    </svg>
+                    Home
+                </a>
+            </li>
+            <li>
+                <div class="flex items-center">
+                    <svg class="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 9 4-4-4-4" />
+                    </svg>
+                    <a href="Course.html"
+                        class="ml-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ml-2 dark:text-gray-400 dark:hover:text-white">Programme</a>
                 </div>
-            </div>
+            </li>
+            <li aria-current="page">
+                <div class="flex items-center">
+                    <svg class="w-3 h-3 text-gray-400 mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 9 4-4-4-4" />
+                    </svg>
+                    <span class="ml-1 text-sm font-medium text-gray-500 md:ml-2 dark:text-gray-400">Diploma of Computer
+                        Science</span>
+                </div>
+            </li>
+        </ol>
+    </nav>
 
+    <h1 class="text-5xl font-extrabold dark:text-white">Bachelor of Software Engineering (Honours)</h1>
+    <img class="h-auto max-w-lg mx-auto" src="images/degree.jpg" alt="image description">
+
+    <div class="align-center">
+        <section>
+            <h5 class="text-xl font-bold dark:text-white overview-title">Programme Overview</h5>
+            <p class="overview-desc">
+                &nbsp;&nbsp;&nbsp;&nbsp;Graduates of this programme will be able to develop, manage and maintain
+                high-quality software in a systematic, controlled and efficient manner. In addition to fundamentals of
+                computing, core courses such as Data Structures and Algorithms, Research Method, Artificial
+                Intelligence, Human Computer Interaction, and Distributed Systems and Parallel Computing will be offered
+                to students.<br><br>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;Students will develop their specialisation by going through the following
+                courses; Systems Analysis and
+                Design, Software Engineering, Software Requirements Engineering, Software Design and Architecture,
+                Formal Methods for Software Engineering, Software Quality Assurance and Testing, Software Evolution and
+                Maintenance, and Software Project Management.<br><br>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;Elective courses like Introduction to Computer Security, Advanced Database
+                Management, Mobile
+                Application Development, Web Application Development, Blockchain Application Development, Agile Software
+                Development, Data Science, and Cloud Computing also will be offered to students undergoing this
+                programme.<br><br>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;Students will have an opportunity to work with the industry through their 6
+                months industrial training
+                and carry out real-life projects on software engineering. All such training will add value to their
+                qualification and increase their employment opportunities.
+            </p>
+        </section>
+
+        <section>
+            <h5 class="text-xl font-bold dark:text-white overview-title">Duration</h5>
+            <p class="overview-desc">
+                &nbsp;&nbsp;&nbsp;&nbsp;3 years
+            </p>
+        </section>
+
+        <section>
+            <h5 class="text-xl font-bold dark:text-white overview-title">Campuses</h5>
+            <ul class="space-y-4 text-gray-500 list-decimal list-inside dark:text-gray-400 overview-bulletdesc">
+                <li>
+                    <a href="index.html">KL - Kuala Lumpur Main Campus</a>
+                    <ul class="pl-5 mt-2 space-y-1 list-disc list-inside overview-desc-small">
+                        <li>(R2/0612/6/0375)(09/28)(MQA/FA3930)</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://www.tarc.edu.my/penang/index.jsp">PG - Penang Branch Campus</a>
+                    <ul class="pl-5 mt-2 space-y-1 list-disc list-inside overview-desc-small">
+                        <li>(N/481/6/0818)(10/24)(MQA/FA10814)</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h5 class="text-xl font-bold dark:text-white overview-title">Intake</h5>
+            <p class="overview-desc">
+                &nbsp;&nbsp;&nbsp;&nbsp;Year 1 Intake: January (KL); June (KL, PG); November (KL)
+            </p>
+            <p class="overview-desc">
+                &nbsp;&nbsp;&nbsp;&nbsp;Year 2 Intake: June (KL, PG)
+            </p>
+        </section>
+
+        <section>
+            <h5 class="text-xl font-bold dark:text-white overview-title">Fees & Financial Aid</h5>
+            <p class="overview-desc">
+                &nbsp;&nbsp;&nbsp;&nbsp;Estimated Total Fees: RM 34,600 (Malaysian Student)
+            </p>
+            <p class="overview-desc">
+                &nbsp;&nbsp;&nbsp;&nbsp;Estimated Total Fees: RM 60,400 (International Student)
+            </p>
+        </section>
+
+        <section>
+            <h5 class="text-xl font-bold dark:text-white overview-title">Academic Progression</h5>
+            <img class="h-auto max-w-xl" src="images/academic.jpg" alt="Academic Progression">
+        </section>
+
+        <section>
+            <h5 class="text-xl font-bold dark:text-white overview-title">Campuses</h5>
+            <ul class="space-y-4 text-gray-500 list-decimal list-inside dark:text-gray-400 overview-bulletdesc">
+                <li>Problem Solving and Programming</li>
+                <li>Database Management</li>
+                <li>Introduction to Computer Systems</li>
+                <li>Object-Oriented Programming</li>
+                <li>Research Methods</li>
+                <li>Data Structures and Algorithms</li>
+                <li>Software Engineering</li>
+                <li>Social and Professional Issues</li>
+                <li>Software Quality Assurance and Testing</li>
+                <li>Software Requirements Engineering</li>
+                <li>Software Design and Architecture</li>
+                <li>Software Project Management</li>
+                <li>Formal Methods for Software Engineering</li>
+                <li>Software Evolution and Maintenance</li>
+                <li>Systems Analysis and Design</li>
+                <li>Introduction to Computer Networks</li>
+                <li>Web Design and Development</li>
+                <li>Human-Computer Interaction</li>
+                <li>Probability and Statistics</li>
+                <li>Discrete Mathematics</li>
+                <li>Advanced Discrete Mathematics</li>
+                <li>Music Appreciation</li>
+                <li>Project I</li>
+                <li>Project II</li>
+                <li>Industrial Training (6 months)</li>
+                <li>Electives (Choose 6)
+                    <ul class="pl-5 mt-2 space-y-1 list-disc list-inside overview-desc-small">
+                        <li>Advanced Database Management</li>
+                        <li>Artificial Intelligence</li>
+                        <li>Web Application Development</li>
+                        <li>Blockchain Application Development</li>
+                        <li>Introduction to Computer Security</li>
+                        <li>Distributed Systems and Parallel Computing</li>
+                        <li>Mobile Application Development</li>
+                        <li>Graphic Programming</li>
+                        <li>Integrative Programming</li>
+                        <li>Image Processing</li>
+                        <li>Data Science</li>
+                        <li>Cloud Computing</li>
+                        <li>Agile Software Development</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <a href="Course.html">
+                <button type="button"
+                    class="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 button-style">Back
+                    to Programme</button>
+            </a>
+            <a href="comparisonTable.html">
+                <button type="button"
+                    class="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 button-style">Compare
+                    Course</button>
+            </a>
         </section>
     </div>
-
-
-    <!--------------- Chatbot --------------->
-    <div id="chatbot-div">
-
-        <!--------------- Chatbot Button --------------->
-        <button class="chatbot-toggler">
-            <span class="material-symbols-outlined">mode_comment</span>
-            <span class="material-symbols-outlined">close</span>
-        </button>
-
-        <main id="main" class="chatbot">
-            <div id="chatbot-container">
-                <div id="chatbot-inner">
-                    <div id="chatbot"></div>
-                </div>
-            </div>
-        </main>
-
-    </div>
-    <!--------------- Chatbot --------------->
-
-    <!----- Customise Javascript ----->
-    <script src="javascript/comparisonTable.js"></script>
 </body>
 
 <footer class="bg-gray-100">
