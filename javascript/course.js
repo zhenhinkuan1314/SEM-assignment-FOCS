@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   function openCourseLink(link) {
-    window.open(link, "_blank"); 
+    window.open(link, "_blank");
   }
 
   function addPointerClass(event) {
@@ -62,8 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const value = e.target.value.toLowerCase();
     courses.forEach((course) => {
       const isVisible =
-        course.title.toLowerCase().includes(value) ||
-        course.description.toLowerCase().includes(value);
+        course.title.toLowerCase().includes(value)
       course.element.classList.toggle("hide", !isVisible);
     });
   });
