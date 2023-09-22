@@ -16,7 +16,7 @@
 
     <!----- Customise CSS ----->
     <link rel="stylesheet" type="text/css" href="styles/faq.css">
-   
+    <link rel="stylesheet" type="text/css" href="styles/research.css">
 
     <!----- Customise Javascript ----->
     <script type="text/babel" data-presets="es2015,es2016,es2017" src="/javascript/chatbot.js"></script>
@@ -112,59 +112,75 @@
 
 <body>
         <!--------------- Banner --------------->
-        <div class="banner" style="width: auto; height: 400px; line-height: 400px; text-align: center;">
-            <h1 style="margin: auto; color: white; font-size: 60px; display: inline-block; font-weight: bold;">Facilities</h1>
+        <div class="banner-research" style="width: auto; height: 400px; line-height: 400px; text-align: center;">
+            <h1 style="margin: auto; color: white; font-size: 60px; display: inline-block; font-weight: bold;">Research</h1>
         </div>
 
-        <div class="mx-auto max-w-screen-xl px-6 py-16 sm:px-6" id="page1" style="display: block;">
-          <div class="mx-auto max-w-3xl">
-            <h1 class="text-center text-3xl font-bold text-700 sm:text-4xl"> <!-- Adjust text size here -->
-              Facilities
-            </h1>
-            <div class="table-responsive">
-              <section class="mb-10 md:mb-32">
-                <table class="table-auto w-full">
-                  <tr>
-                    <td>
-                      <ul class="list-disc pl-4 text-lg"> <!-- Adjust text size here -->
-                        <li>Microsoft Lab</li>
-                        <li>IBM Centre of Excellence Lab</li>
-                        <li>Software & Web Development Lab</li>
-                        <li>Project Lab</li>
-                        <li>Database and Data Analytics Lab</li>
-                        <li>Multimedia, Interactive Software cum Games</li>
-                        <li>Experience Lab</li>
-                      </ul>
-                    </td>
-                    <td>
-                      <ul class="list-disc pl-4 text-lg"> <!-- Adjust text size here -->
-                        <li>Internet of Things Lab</li>
-                        <li>Cisco Equipment Lab</li>
-                        <li>PC Maintenance Lab</li>
-                        <li>Digital Forensics Lab</li>
-                        <li>Cyber Warfare Training Lab</li>
-                        <li>Mobile Application Development Lab</li>
-                        <li>Computer Science Teaching Lab</li>
-                      </ul>
-                    </td>
-                  </tr>
-                </table>
-              </section>
+
+       <div class="reseach-content container mx-auto mt-12 px-4 lg:w-4/5 border rounded-lg shadow-lg bg-gray-200">
+            <div class="top mb-12 p-6">
+                <h1 class="text-4xl font-bold mb-6 text-center">Centre for Integrated Circuit Research and Development (CICR&D)</h1>
+                <img src="/images/CICR&D.jpg" alt="" class="mx-auto mb-6">
+                <p class="text-center">Led by Dr. Poh Tze Ven</p>
             </div>
+           <div class="mid px-6">
+                <h1 class="text-3xl font-semibold mb-4 text-center" >What is an integrated circuit (IC)?</h1>
+                <p class="mb-6 w-4/5 mx-auto">
+                    Integrated circuit (IC) is an assembly of electronics components miniaturised and fabricated onto a thin subtract 
+                    of semiconductor material (typically silicon). Such miniaturisation permits billions of microscopic circuit components
+                    to be packed into a few centimetres squares space, or smaller, allowing the creation of complex systems in a practical 
+                    and economical way, such as computers or processors. Without processors, we will not have Artificial Intelligence (AI), 
+                    smart devices, the Internet, and many others. They are the heart and the brains. So smart things start with hardware 
+                    integrated circuits.
+                </p>
+                <h2 class="text-2xl font-semibold mb-4 text-center">What we do</h2>
+                <p class="mb-6 w-4/5 mx-auto">
+                    To explore and research algorithms for solving real-world problems related to IC design and verifications, and to use integrated circuits 
+                    such as FPGA and microcontrollers to create intelligent solutions.
+                </p>
+
+                <h2 class="text-2xl font-semibold mb-4 text-center">What we aim for</h2>
+                <p class="mb-6 w-4/5 mx-auto">
+                    To explore opportunities and apply our knowledge to solve and provide innovative solutions to problems related to Electronic Design Automation (EDA) tools,
+                    which are used for designing and verifying complex IC. We also aim to support campus initiatives to create innovative smart systems for solving problems faced by TAR UMT.
+                </p>
+
+                <h1 class="text-2xl font-semibold mb-4 text-center">Projects: Recent work</h1>
+
+                <h2 class="text-2xl font-semibold mb-4 text-center">LED & Driver with IoT Control for Agriculture 4.0</h2>
+                <p class="mb-6 w-4/5 mx-auto">
+                    This is horticulture LED lighting systems for ginger farming on TAR UMT campus. It is to provide variable intensity artificial 
+                    light for growing ginger plants for research purposes. The grow light systems are controlled and monitored using IoT devices developed in-house.
+                    This allows quick and easy access to data and remote control through PC or smartphones anywhere in the world as long as there is an Internet connection. 
+                </p>
+
+                <h1 class="text-2xl font-semibold mb-4 text-center">Development of an IoT network for Plant Soil Moisture and Temperature Monitoring with Irrigation Control.</h1>
+                <img src="/images/project.png" alt="" class="mx-auto mb-4 w-full max-w-md">
+                <p class="mb-6 w-4/5 mx-auto">
+                    This work is an IoT Project for a plant monitoring system in conjunction with Agriculture 4.0. Soil Moisture sensors and 
+                    temperature sensors were attached to the plant. These sensors are connected to low power microcontrollers to form sensor 
+                    nodes, possibly powered by solar panels and buffered by super-capacitors/ rechargeable batteries. The sensor nodes will 
+                    communicate via wifi/ LoRA to the gateway or other central MCU nodes to communicate sensor readings to any device with 
+                    internet/ network access. Irrigation control platform has been physically modelled using MCU, relays and moisture sensor 
+                    readings to remotely/ automatically control whether or not to turn on the water pump. In future, the farmers may monitor 
+                    and control their crops from anywhere. 
+                </p>
+
+                <h1 class="text-2xl mt-8 font-semibold mb-4 text-center">Past achievements</h1>
+                <ul class="list-disc pl-5 mb-6 w-4/5 mx-auto">
+                    <li class="mb-2">May 2018: Static Code Analysis of Python Code funded by Synopsys, Inc. through Malaysian registered company, Ascend Microsystems Sdn (RM 24,804 industrial grant).</li>
+                    <li class="mb-2">May 2017: Project related to tiling in the Synopsys’ EDA funded by Synopsys, Inc. through Malaysian registered company, Ascend Microsystems Sdn (RM 313,200 industrial grant).</li>
+                </ul>
+            
+                <h1 class="text-2xl mt-8 font-semibold mb-4 text-center">Selected Past Projects</h1>
+                <ul class="list-disc pl-5 mb-6 w-4/5 mx-auto">
+                    <li class="mb-2">2019: Development of an IoT network for Plant Soil Moisture and Temperature Monitoring with Irrigation Control.</li>
+                    <li class="mb-2">2018: Development of an FPGA based Object Tracking Robot: Tracking Algorithm for Object Tracking Robot.</li>
+                    <!-- ... other list items ... -->
+                </ul>
+           </div>
+       </div>
         
-              <!-- YouTube Video Embed Outside the Table and Div -->
-    <div class="mx-auto max-w-4xl">
-      <div class="relative" style="padding-top: 56.25%;">
-        <iframe
-          src="https://www.youtube.com/embed/VbLIvaqQwpY"
-          frameborder="0"
-          allowfullscreen
-          class="absolute inset-0 w-full h-full"
-        ></iframe>
-      </div>
-    </div>
-  </div>
-</div>
          
         
      
@@ -288,6 +304,7 @@
                 </div>
     
             </div>
+    
             <!----- Copyright ----->
             <div class="pt-5 pb-10 border-t">
                 <p class="text-sm text-gray-600 text-center">
@@ -295,7 +312,7 @@
                 </p>
                 <div id="ip-address-display" class="text-sm text-gray-500 text-center mt-4"></div>
             </div>
-            
+                
         </div>
     </footer>
 

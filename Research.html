@@ -16,12 +16,12 @@
 
     <!----- Customise CSS ----->
     <link rel="stylesheet" type="text/css" href="styles/faq.css">
-   
+    <link rel="stylesheet" type="text/css" href="styles/research.css">
 
     <!----- Customise Javascript ----->
     <script type="text/babel" data-presets="es2015,es2016,es2017" src="/javascript/chatbot.js"></script>
     <script src="/javascript/conversation.js"></script>
-    <script src="../javascript/ip.js"></script>
+
     <!-- These provide in-browser transpilation of ES6 JS code to ES5 to support IE11 -->
     <script src="https://unpkg.com/@babel/polyfill@7.6.0/dist/polyfill.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -97,11 +97,6 @@
                             Facilities
                         </a>
                     </li>
-                    <li>
-                        <a href="Research.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">
-                            Research
-                        </a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -112,59 +107,26 @@
 
 <body>
         <!--------------- Banner --------------->
-        <div class="banner" style="width: auto; height: 400px; line-height: 400px; text-align: center;">
-            <h1 style="margin: auto; color: white; font-size: 60px; display: inline-block; font-weight: bold;">Facilities</h1>
+        <div class="banner-research" style="width: auto; height: 400px; line-height: 400px; text-align: center;">
+            <h1 style="margin: auto; color: white; font-size: 60px; display: inline-block; font-weight: bold;">Research</h1>
         </div>
 
-        <div class="mx-auto max-w-screen-xl px-6 py-16 sm:px-6" id="page1" style="display: block;">
-          <div class="mx-auto max-w-3xl">
-            <h1 class="text-center text-3xl font-bold text-700 sm:text-4xl"> <!-- Adjust text size here -->
-              Facilities
-            </h1>
-            <div class="table-responsive">
-              <section class="mb-10 md:mb-32">
-                <table class="table-auto w-full">
-                  <tr>
-                    <td>
-                      <ul class="list-disc pl-4 text-lg"> <!-- Adjust text size here -->
-                        <li>Microsoft Lab</li>
-                        <li>IBM Centre of Excellence Lab</li>
-                        <li>Software & Web Development Lab</li>
-                        <li>Project Lab</li>
-                        <li>Database and Data Analytics Lab</li>
-                        <li>Multimedia, Interactive Software cum Games</li>
-                        <li>Experience Lab</li>
-                      </ul>
-                    </td>
-                    <td>
-                      <ul class="list-disc pl-4 text-lg"> <!-- Adjust text size here -->
-                        <li>Internet of Things Lab</li>
-                        <li>Cisco Equipment Lab</li>
-                        <li>PC Maintenance Lab</li>
-                        <li>Digital Forensics Lab</li>
-                        <li>Cyber Warfare Training Lab</li>
-                        <li>Mobile Application Development Lab</li>
-                        <li>Computer Science Teaching Lab</li>
-                      </ul>
-                    </td>
-                  </tr>
-                </table>
-              </section>
-            </div>
+
+        <!--------------- Research --------------->
+        <div class="research flex flex-col items-center justify-center p-4 md:p-8 lg:p-16 w-4/5 mx-auto">
+            <h1 class="text-xl md:text-2xl lg:text-4xl mb-4">Research</h1>
+            <h2 class="text-lg md:text-3xl lg:text-3xl mb-4">Research Centres in the Faculty of Computing and Information Technology</h2>
+            <p class="text-base md:text-lg lg:text-xl mb-4">
+                There are Six (6) research centres in FOCS which serve as the incubator to explore new ideas and research, and to nurture new researchers. Faculty members perform individual research, group research, and collaborative research with individual researcher(s) from other faculties, institutions, statutory bodies or industry partners. Members provide consultancy, testing and analysis services using scientific instruments available in the laboratories based on the stipulated and approved guidelines and charges. Activities include conducting or organizing research projects, consultancy works, workshops, seminars, conferences and any other relevant activities including papers publishing.
+            </p>
+            <ul class="pl-5">
+                <li class="relative before:content-[''] before:block before:absolute before:left-[-1.5em] before:top-1/2 before:-translate-y-1/2 before:w-2 before:h-2 before:bg-blue-500 mb-2">
+                    <a href="/CICR&D.html" class="hover:text-blue-500">Centre for Integrated Circuit Research and Development (CICR&D)</a>
+                </li>
+                <!-- Add more list items as needed -->
+            </ul>
+        </div>
         
-              <!-- YouTube Video Embed Outside the Table and Div -->
-    <div class="mx-auto max-w-4xl">
-      <div class="relative" style="padding-top: 56.25%;">
-        <iframe
-          src="https://www.youtube.com/embed/VbLIvaqQwpY"
-          frameborder="0"
-          allowfullscreen
-          class="absolute inset-0 w-full h-full"
-        ></iframe>
-      </div>
-    </div>
-  </div>
-</div>
          
         
      
@@ -288,6 +250,7 @@
                 </div>
     
             </div>
+    
             <!----- Copyright ----->
             <div class="pt-5 pb-10 border-t">
                 <p class="text-sm text-gray-600 text-center">
@@ -295,7 +258,7 @@
                 </p>
                 <div id="ip-address-display" class="text-sm text-gray-500 text-center mt-4"></div>
             </div>
-            
+                
         </div>
     </footer>
 

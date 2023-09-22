@@ -23,7 +23,7 @@
     <!----- Customise Javascript ----->
     <script type="text/babel" data-presets="es2015,es2016,es2017" src="/javascript/chatbot.js"></script>
     <script src="/javascript/conversation.js"></script>
-
+    <script src="../javascript/ip.js"></script>
     <!-- These provide in-browser transpilation of ES6 JS code to ES5 to support IE11 -->
     <script src="https://unpkg.com/@babel/polyfill@7.6.0/dist/polyfill.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -98,6 +98,11 @@
                     <li>
                         <a href="facilities.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">
                             Facilities
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Research.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">
+                            Research
                         </a>
                     </li>
                 </ul>
@@ -608,7 +613,9 @@
             <p class="text-sm text-gray-600 text-center">
             © Copyright 2023 All rights reserved for SEM Assignment
             </p>
+            <div id="ip-address-display" class="text-sm text-gray-500 text-center mt-4"></div>
         </div>
+
             
     </div>
 </footer>
