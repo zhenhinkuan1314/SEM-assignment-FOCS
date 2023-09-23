@@ -13,16 +13,21 @@
     <!----- Link to fontawesome ----->
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
     <!----- Customise CSS ----->
     <link rel="stylesheet" type="text/css" href="styles/faq.css">
     <link rel="stylesheet" type="text/css" href="styles/staff.css">
-
+    <script type="text/babel" data-presets="es2015,es2016,es2017" src="/javascript/chatbot.js"></script>
+    <script src="/javascript/conversation.js"></script>
     <!----- Customise Javascript ----->
     <!-- <script src="../javascript/faq.js"></script> -->
     <script src="../javascript/staffD.js"></script>
     <script src="../javascript/ip.js"></script>
-
+    <!-- These provide in-browser transpilation of ES6 JS code to ES5 to support IE11 -->
+    <script src="https://unpkg.com/@babel/polyfill@7.6.0/dist/polyfill.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 
 <header>
@@ -135,7 +140,25 @@
     <div id="app" class="p-6">
         
     </div>
+    <!--------------- Chatbot --------------->
+  <div id="chatbot-div">
 
+    <!--------------- Chatbot Button --------------->
+    <button class="chatbot-toggler">
+      <span class="material-symbols-outlined">mode_comment</span>
+      <span class="material-symbols-outlined">close</span>
+    </button>
+
+    <main id="main" class="chatbot">
+      <div id="chatbot-container">
+        <div id="chatbot-inner">
+          <div id="chatbot"></div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+  <!--------------- Chatbot --------------->
 </body>
 
 <footer class="bg-gray-100">
